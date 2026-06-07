@@ -5,6 +5,8 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import Nav from "@/components/nav";
 import { getCaseBySlug, getAllCases } from "@/lib/mdx";
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const cases = getAllCases();
   return cases.map((c) => ({ slug: c.slug }));
@@ -29,17 +31,20 @@ function Mockup({ alt }: { alt: string }) {
 
 const components = { Mockup };
 
-export default function CaseStudyPage({
+export default async function CaseStudyPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
+  const { slug } = await params;
   let caseData;
   try {
-    caseData = getCaseBySlug(params.slug);
+    caseData = getCaseBySlug(slug);
   } catch {
     notFound();
   }
+
+  if (!caseData) notFound();
 
   const { frontmatter, content } = caseData;
 
