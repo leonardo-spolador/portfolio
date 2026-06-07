@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "headline": "Designing for the people who run complex energy systems",
+    "subheadline": "Battery analytics, wind operations, grid-connected platforms. Seventeen years of design practice, the last several where a wrong call has real consequences.",
+    "cta_primary": {
+      "label": "View the work",
+      "href": "/projects"
+    },
+    "cta_secondary": {
+      "label": "Get in touch",
+      "href": "mailto:leonardo.spolador@gmail.com"
+    }
+  },
+  "outcomes": [
+    {
+      "metric": "€1.6M",
+      "label": "Revenue growth linked to product design decisions"
+    },
+    {
+      "metric": "48%",
+      "label": "Increase in annual contract value"
+    },
+    {
+      "metric": "100+",
+      "label": "People trained across design and product CoPs"
+    },
+    {
+      "metric": "80%",
+      "label": "Reduction in time-to-value for critical workflows"
+    }
+  ],
+  "tagline": "Designing at every scale.",
+  "positioning": [
+    "My work has been in energy systems for the past several years: predictive battery analytics, wind farm operations, grid-connected platforms. Environments where software is the infrastructure people depend on to make real decisions. Where a missed risk signal, a wrong maintenance call, or an opaque dataset has consequences in the physical world.",
+    "That context shapes how I think about design — not as screens, but as a system for turning complexity into clarity.",
+    "Building the right conditions for that work matters as much as doing it. I co-founded two companies early in my career, and what I learned is that a team is itself a system. One that gets stronger when people have room to grow, experiment, and find their best contribution. My way of leading is side by side: close to the craft, working with the team, keeping direction clear enough that people can move fast with confidence."
+  ],
+  "case_studies": [
+    {
+      "title": "From scattered modules to a platform operators depend on daily",
+      "company": "TWAICE",
+      "tags": "Battery Analytics · B2B SaaS · 3 years",
+      "description": "Shaped product strategy and earned design influence without authority — from a single State of Health chart to TWAICE's flagship product.",
+      "image": "https://placehold.co/800x500",
+      "href": "/projects/twaice"
+    },
+    {
+      "title": "Designing for trust in a market where trust is the product",
+      "company": "ExxonMobil",
+      "tags": "Mobil Mexico · Consumer Loyalty · Mobile",
+      "description": "Research-led design under vendor resistance. Defended a mobile-first direction backed by market data — from discovery through usability validation.",
+      "image": "https://placehold.co/800x500",
+      "href": "/projects/exxonmobil"
+    },
+    {
+      "title": "The program I built to make myself unnecessary",
+      "company": "ExxonMobil",
+      "tags": "Design Community of Practice · Leadership",
+      "description": "Grew design capability across 100+ people in a global organisation. The program kept running after I left.",
+      "image": "https://placehold.co/800x500",
+      "href": "/projects/design-cop"
+    },
+    {
+      "title": "Designing operational clarity for the people who run wind farms",
+      "company": "Shoreline Wind",
+      "tags": "Wind Operations · B2B SaaS · Current",
+      "description": "Unifying fragmented legacy workflows into a coherent operational platform. Case study in progress.",
+      "image": "https://placehold.co/800x500",
+      "href": "/projects/shoreline"
+    }
+  ],
+  "testimonial": {
+    "quote": "Leonardo has consistently demonstrated resilience and a highly collaborative spirit. His exceptional ability to clearly articulate design decisions facilitates smooth cross-functional collaboration and empowers less experienced designers.",
+    "name": "Oliver Eckstein",
+    "title": "Head of Product & UX, TWAICE"
+  },
+  "contact": {
+    "heading": "If the problem involves complex systems and people making real decisions under pressure — that's the conversation I'm built for.",
+    "body": "If you're building operational software for energy systems — or something equally complex — and thinking about what design leadership looks like at your stage, I'd like to talk.",
+    "cta": {
+      "label": "Get in touch",
+      "href": "mailto:leonardo.spolador@gmail.com"
+    }
+  }
+}
