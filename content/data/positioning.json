@@ -1,0 +1,16 @@
+{
+  "headline": "Designing for the people who run complex energy systems",
+  "subheadline": "My work is in energy systems: wind operations, battery analytics, grid-connected platforms. Environments where a wrong call has real consequences, and where good design directly changes how fast and how well people can act.",
+  "cta_primary": {
+    "label": "Contact me",
+    "href": "mailto:leonardo.spolador@gmail.com"
+  },
+  "cta_secondary": {
+    "label": "Book a conversation",
+    "href": "https://calendly.com/leonardo-spolador/meeting-with-leonardo-spolador"
+  },
+  "cta_tertiary": {
+    "label": "Download CV",
+    "href": "https://drive.google.com/file/d/10mC0ggeLh0HbHW7fUR2r1auFNVdKclWt/view?usp=sharing"
+  }
+}
