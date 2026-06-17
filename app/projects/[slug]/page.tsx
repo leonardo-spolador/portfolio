@@ -41,23 +41,23 @@ function Quote({
   image?: string;
 }) {
   return (
-    <figure className="not-prose my-8 flex gap-4 items-start">
-      {image && (
-        <Image
-          src={image}
-          alt={name}
-          width={56}
-          height={56}
-          className="w-12 h-12 rounded-full object-cover shrink-0 mt-1"
-        />
-      )}
-      <div className={image ? "" : "border-l-2 border-zinc-200 pl-4"}>
-        <blockquote className="text-zinc-600 leading-relaxed">{children}</blockquote>
-        <figcaption className="mt-2 text-sm text-zinc-400">
-          <span className="font-medium text-zinc-700">{name}</span>
-          {role ? `, ${role}` : ""}
-        </figcaption>
-      </div>
+    <figure className="not-prose my-8 rounded-2xl border border-zinc-100 bg-zinc-50/60 p-8 sm:p-10">
+      <blockquote className="text-zinc-600 leading-relaxed">{children}</blockquote>
+      <figcaption className="mt-6 flex items-center gap-3">
+        {image && (
+          <Image
+            src={image}
+            alt={name}
+            width={56}
+            height={56}
+            className="w-11 h-11 rounded-full object-cover shrink-0"
+          />
+        )}
+        <span className="text-sm text-zinc-400">
+          <span className="block font-medium text-zinc-700">{name}</span>
+          {role ? <span className="block">{role}</span> : null}
+        </span>
+      </figcaption>
     </figure>
   );
 }
