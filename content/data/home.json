@@ -41,7 +41,7 @@
       "company": "TWAICE",
       "tags": "Battery Analytics · B2B SaaS · 3 years",
       "description": "Shaped product strategy and earned design influence without authority — from a single State of Health chart to TWAICE's flagship product.",
-      "image": "https://placehold.co/800x500",
+      "image": "/cases/twaice/asset-dashboard.jpg",
       "href": "/projects/twaice"
     },
     {
@@ -49,7 +49,7 @@
       "company": "ExxonMobil",
       "tags": "Mobil Mexico · Consumer Loyalty · Mobile",
       "description": "Research-led design under vendor resistance. Defended a mobile-first direction backed by market data — from discovery through usability validation.",
-      "image": "https://placehold.co/800x500",
+      "image": "/cases/mobil-mexico/app-screens.png",
       "href": "/projects/mobil-mexico"
     },
     {
@@ -65,7 +65,7 @@
       "company": "Shoreline Wind",
       "tags": "Wind Operations · B2B SaaS · Current",
       "description": "Unifying fragmented legacy workflows into a coherent operational platform. Case study in progress.",
-      "image": "https://placehold.co/800x500",
+      "image": "/cases/shoreline/roi-calculator.png",
       "href": "/projects/shoreline"
     }
   ],

@@ -12,15 +12,15 @@ export async function generateStaticParams() {
   return cases.map((c) => ({ slug: c.slug }));
 }
 
-function Mockup({ alt }: { alt: string }) {
+function Mockup({ alt, src }: { alt: string; src?: string }) {
   return (
     <figure className="my-10">
       <Image
-        src="https://placehold.co/800x500"
+        src={src ?? "https://placehold.co/800x500"}
         alt={alt}
-        width={800}
-        height={500}
-        className="w-full rounded-lg"
+        width={1600}
+        height={1000}
+        className="w-full h-auto rounded-lg border border-zinc-100"
       />
       {alt && (
         <figcaption className="mt-2 text-xs text-zinc-400 text-center">{alt}</figcaption>

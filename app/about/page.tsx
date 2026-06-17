@@ -32,8 +32,8 @@ export default function AboutPage() {
               src={about.portrait.src}
               alt={about.portrait.alt}
               width={600}
-              height={800}
-              className="w-full rounded-lg"
+              height={600}
+              className="w-full h-auto rounded-lg"
             />
             <p className="mt-4 text-sm text-zinc-400 leading-relaxed">
               {about.human_moment.split("\n\n").map((para, i) => (

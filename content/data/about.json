@@ -38,7 +38,7 @@
     }
   ],
   "portrait": {
-    "src": "https://placehold.co/600x800",
+    "src": "/cases/about/portrait.jpg",
     "alt": "Leonardo Spolador"
   },
   "human_moment": "I work best when the problem is genuinely hard and the people around me know their domain. Most of my career has been spent earning the trust of engineers and domain experts by actually understanding what they're dealing with. That's not a positioning strategy. It's just how I prefer to work.\n\nI'm Brazilian, based in Garching bei München. I've been in Germany long enough to know that the directness I value in technical conversations is not considered unusual here.",
