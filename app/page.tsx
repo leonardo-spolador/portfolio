@@ -76,13 +76,13 @@ export default function Home() {
                 href={card.href}
                 className="group flex flex-col gap-4 rounded-xl border border-zinc-100 overflow-hidden hover:border-zinc-300 transition-colors"
               >
-                <div className="overflow-hidden bg-zinc-50">
+                <div className="relative aspect-[16/10] overflow-hidden bg-zinc-50">
                   <Image
                     src={card.image}
                     alt={card.title}
                     width={800}
                     height={500}
-                    className="w-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
                   />
                 </div>
                 <div className="flex flex-col gap-2 px-5 pb-6">

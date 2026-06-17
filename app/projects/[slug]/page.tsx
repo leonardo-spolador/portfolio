@@ -93,17 +93,19 @@ export default async function CaseStudyPage({
 
       {/* MDX Content */}
       <article className="border-t border-zinc-100 py-16">
-        <div className="max-w-2xl mx-auto w-full px-6 prose prose-zinc prose-base
-          prose-headings:font-semibold prose-headings:tracking-tight
-          prose-h2:text-xl prose-h2:mt-12 prose-h2:mb-4
-          prose-h3:text-base prose-h3:mt-8 prose-h3:mb-3
-          prose-p:text-zinc-600 prose-p:leading-relaxed
-          prose-blockquote:border-l-2 prose-blockquote:border-zinc-200
-          prose-blockquote:pl-4 prose-blockquote:text-zinc-500 prose-blockquote:not-italic
-          prose-strong:text-zinc-900 prose-strong:font-semibold
-          prose-hr:border-zinc-100
-          max-w-none">
-          <MDXRemote source={content} components={components} />
+        <div className="max-w-5xl mx-auto w-full px-6">
+          <div className="prose prose-zinc prose-base
+            prose-headings:font-semibold prose-headings:tracking-tight
+            prose-h2:text-xl prose-h2:mt-12 prose-h2:mb-4
+            prose-h3:text-base prose-h3:mt-8 prose-h3:mb-3
+            prose-p:text-zinc-600 prose-p:leading-relaxed
+            prose-blockquote:border-l-2 prose-blockquote:border-zinc-200
+            prose-blockquote:pl-4 prose-blockquote:text-zinc-500 prose-blockquote:not-italic
+            prose-strong:text-zinc-900 prose-strong:font-semibold
+            prose-hr:border-zinc-100
+            max-w-none">
+            <MDXRemote source={content} components={components} />
+          </div>
         </div>
       </article>
 
