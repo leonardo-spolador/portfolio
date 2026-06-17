@@ -29,7 +29,40 @@ function Mockup({ alt, src }: { alt: string; src?: string }) {
   );
 }
 
-const components = { Mockup };
+function Quote({
+  children,
+  name,
+  role,
+  image,
+}: {
+  children: React.ReactNode;
+  name: string;
+  role?: string;
+  image?: string;
+}) {
+  return (
+    <figure className="not-prose my-8 flex gap-4 items-start">
+      {image && (
+        <Image
+          src={image}
+          alt={name}
+          width={56}
+          height={56}
+          className="w-12 h-12 rounded-full object-cover shrink-0 mt-1"
+        />
+      )}
+      <div className={image ? "" : "border-l-2 border-zinc-200 pl-4"}>
+        <blockquote className="text-zinc-600 leading-relaxed">{children}</blockquote>
+        <figcaption className="mt-2 text-sm text-zinc-400">
+          <span className="font-medium text-zinc-700">{name}</span>
+          {role ? `, ${role}` : ""}
+        </figcaption>
+      </div>
+    </figure>
+  );
+}
+
+const components = { Mockup, Quote };
 
 export default async function CaseStudyPage({
   params,
