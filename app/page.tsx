@@ -10,6 +10,14 @@ export default function Home() {
 
       {/* Hero */}
       <section className="max-w-5xl mx-auto w-full px-6 pt-24 pb-20">
+        <Image
+          src={home.hero.avatar}
+          alt={home.hero.name}
+          width={72}
+          height={72}
+          className="w-16 h-16 rounded-full object-cover mb-6"
+          priority
+        />
         <h1 className="text-4xl font-semibold tracking-tight leading-tight max-w-2xl sm:text-5xl mb-6">
           {home.hero.headline}
         </h1>

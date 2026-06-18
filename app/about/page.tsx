@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Nav from "@/components/nav";
+import ThreadIcon from "@/components/thread-icon";
 import about from "@/content/data/about.json";
 
 export default function AboutPage() {
@@ -69,6 +70,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
             {about.threads.map((thread) => (
               <div key={thread.heading} className="flex flex-col gap-3">
+                <ThreadIcon name={thread.icon} className="text-zinc-800" />
                 <h3 className="text-base font-semibold text-zinc-900">
                   {thread.heading}
                 </h3>

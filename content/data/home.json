@@ -1,5 +1,7 @@
 {
   "hero": {
+    "avatar": "/cases/about/portrait.jpg",
+    "name": "Leonardo Spolador",
     "headline": "Designing for the people who run complex energy systems",
     "subheadline": "Battery analytics, wind operations, grid-connected platforms. Seventeen years of design practice, the last several where a wrong call has real consequences.",
     "cta_primary": {

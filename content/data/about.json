@@ -13,14 +13,17 @@
   },
   "threads": [
     {
+      "icon": "bolt",
       "heading": "Energy domain depth",
       "body": "After several years designing for battery analytics and wind farm operations, I can speak the language engineers and domain experts use — electrochemical degradation, State of Health, turbine performance curves, grid imbalance, O&M workflows. That vocabulary isn't decoration. It's what allows a designer to earn trust in rooms where most designers would be ignored, and to make design decisions that hold up under technical scrutiny."
     },
     {
+      "icon": "users",
       "heading": "Leadership without the title",
       "body": "I've led in different configurations throughout my career. Co-founder of two companies. Led the Design Community of Practice at ExxonMobil — planned curriculum, mentored designers, ran cross-functional sessions that reached 100+ people across product, engineering, and project management. Self-initiated the Lithium Design System at TWAICE and drove adoption across teams without a mandate. The leadership evidence exists. The formal title is the next step, not the starting point."
     },
     {
+      "icon": "code",
       "heading": "Builder in 2026",
       "body": "The Wind ROI Calculator is a deployed tool I built to help wind farm operators evaluate the revenue impact of operational decisions — built with Figma Make, Supabase, and Slack automation, live at a public URL. That's the level I'm working at with AI tools: not experimenting, deploying. Beyond prototyping, I use GitHub Copilot with Claude models directly in the Shoreline Wind production codebase — concept testing that ends in a real PR, not a handoff document. The goal is always the same: move faster, validate earlier, and reduce the distance between a design decision and something engineers can actually react to."
     }
