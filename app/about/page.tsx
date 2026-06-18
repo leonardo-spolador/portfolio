@@ -86,12 +86,27 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto w-full px-6">
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
             {about.testimonials.map((t) => (
-              <figure key={t.name} className="flex flex-col gap-4">
-                <blockquote className="text-base text-zinc-700 leading-relaxed">
+              <figure
+                key={t.name}
+                className="rounded-2xl border border-zinc-100 bg-zinc-50/60 p-8 sm:p-10"
+              >
+                <blockquote className="text-zinc-600 leading-relaxed">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
-                <figcaption className="text-sm text-zinc-400">
-                  {t.name}, {t.title}
+                <figcaption className="mt-6 flex items-center gap-3">
+                  {t.image && (
+                    <Image
+                      src={t.image}
+                      alt={t.name}
+                      width={56}
+                      height={56}
+                      className="w-11 h-11 rounded-full object-cover shrink-0"
+                    />
+                  )}
+                  <span className="text-sm text-zinc-400">
+                    <span className="block font-medium text-zinc-700">{t.name}</span>
+                    <span className="block">{t.title}</span>
+                  </span>
                 </figcaption>
               </figure>
             ))}
