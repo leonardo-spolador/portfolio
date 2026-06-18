@@ -5,17 +5,18 @@ import Image from "next/image";
 
 type SlideshowProps = {
   base: string;
-  count: number;
+  count: number | string;
   alt?: string;
 };
 
 export default function Slideshow({ base, count, alt = "Slide" }: SlideshowProps) {
+  const total = Number(count);
   const slides = Array.from(
-    { length: count },
+    { length: total },
     (_, i) => `${base}${String(i + 1).padStart(2, "0")}.jpg`,
   );
   const [idx, setIdx] = useState(0);
-  const go = (delta: number) => setIdx((i) => (i + delta + count) % count);
+  const go = (delta: number) => setIdx((i) => (i + delta + total) % total);
 
   return (
     <figure className="not-prose my-10">
@@ -23,7 +24,7 @@ export default function Slideshow({ base, count, alt = "Slide" }: SlideshowProps
         <Image
           key={idx}
           src={slides[idx]}
-          alt={`${alt} — slide ${idx + 1} of ${count}`}
+          alt={`${alt} — slide ${idx + 1} of ${total}`}
           fill
           sizes="(max-width: 1024px) 100vw, 1024px"
           className="object-contain"
@@ -52,7 +53,7 @@ export default function Slideshow({ base, count, alt = "Slide" }: SlideshowProps
         </button>
 
         <div className="absolute bottom-3 right-3 rounded-full bg-zinc-900/70 px-2.5 py-1 text-xs font-medium text-white">
-          {idx + 1} / {count}
+          {idx + 1} / {total}
         </div>
       </div>
 
