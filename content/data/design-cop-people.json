@@ -1,0 +1,103 @@
+{
+  "groups": [
+    {
+      "label": "Close collaborators",
+      "people": [
+        {
+          "name": "Alex Bulman",
+          "image": "/cases/design-cop/people/involved/alex-bulman.jpg"
+        },
+        {
+          "name": "Chris O'Brien",
+          "image": "/cases/design-cop/people/involved/chris-obrien.jpg"
+        },
+        {
+          "name": "David Carvalho",
+          "image": "/cases/design-cop/people/involved/david-carvalho.jpg"
+        },
+        {
+          "name": "Diego Cobelo",
+          "image": "/cases/design-cop/people/involved/diego-cobelo.jpg"
+        },
+        {
+          "name": "Helena Salgado",
+          "image": "/cases/design-cop/people/involved/helena-salgado.jpg"
+        },
+        {
+          "name": "Joel Garfield",
+          "image": "/cases/design-cop/people/involved/joel-garfield.jpg"
+        },
+        {
+          "name": "Juliana Lini",
+          "image": "/cases/design-cop/people/involved/juliana-lini.jpg"
+        },
+        {
+          "name": "Lisa Albrecht",
+          "image": "/cases/design-cop/people/involved/lisa-albrecht.jpg"
+        },
+        {
+          "name": "Lizzie Haldane",
+          "image": "/cases/design-cop/people/involved/lizzie-haldane.jpg"
+        },
+        {
+          "name": "Marcia Corrente",
+          "image": "/cases/design-cop/people/involved/marcia-corrente.jpg",
+          "note": "Encouraged me to take the lead on the CoP."
+        },
+        {
+          "name": "Nick Cochran",
+          "image": "/cases/design-cop/people/involved/nick-cochran.jpg"
+        },
+        {
+          "name": "Skyler Rossacci",
+          "image": "/cases/design-cop/people/involved/skyler-rossacci.jpg"
+        },
+        {
+          "name": "Vihn Hoang",
+          "image": "/cases/design-cop/people/involved/vihn-hoang.jpg"
+        },
+        {
+          "name": "William Yakabi",
+          "image": "/cases/design-cop/people/involved/william-yakabi.jpg"
+        }
+      ],
+      "caption": "The people I worked most closely with through this phase."
+    },
+    {
+      "label": "People I mentored",
+      "people": [
+        {
+          "name": "Amanda Polanski",
+          "image": "/cases/design-cop/people/mentored/amanda-polanski.jpg"
+        },
+        {
+          "name": "Anthony Ejiogu",
+          "image": "/cases/design-cop/people/mentored/anthony-ejiogu.jpg"
+        },
+        {
+          "name": "Isadora Chandelier",
+          "image": "/cases/design-cop/people/mentored/isadora-chandelier.jpg",
+          "note": "Took over leadership of the design CoP after I left."
+        },
+        {
+          "name": "Supakan Dechnarong",
+          "image": "/cases/design-cop/people/mentored/supakan-dechnarong.jpg"
+        }
+      ]
+    },
+    {
+      "label": "Non-designer advocates",
+      "people": [
+        {
+          "name": "Lorete Kossowski",
+          "image": "/cases/design-cop/people/advocates/lorete-kossowski.jpg"
+        },
+        {
+          "name": "Lucas Tramunt Pont",
+          "image": "/cases/design-cop/people/advocates/lucas-tramunt-pont.jpg"
+        }
+      ],
+      "caption": "Non-designers who ran the material themselves and extended its reach."
+    }
+  ]
+}

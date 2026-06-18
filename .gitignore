@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw people photos staging (web copies live in public/cases/design-cop/people)
+/cop-people/

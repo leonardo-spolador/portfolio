@@ -4,6 +4,7 @@ import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Nav from "@/components/nav";
 import Slideshow from "@/components/slideshow";
+import PeopleGrid from "@/components/people-grid";
 import { getCaseBySlug, getAllCases } from "@/lib/mdx";
 
 export const dynamicParams = false;
@@ -63,7 +64,7 @@ function Quote({
   );
 }
 
-const components = { Mockup, Quote, Slideshow };
+const components = { Mockup, Quote, Slideshow, PeopleGrid };
 
 export default async function CaseStudyPage({
   params,
