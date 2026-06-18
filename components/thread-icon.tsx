@@ -29,8 +29,8 @@ export default function ThreadIcon({
 }) {
   return (
     <svg
-      width="48"
-      height="48"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
