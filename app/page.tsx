@@ -104,12 +104,24 @@ export default function Home() {
       {/* Testimonial */}
       <section className="border-t border-zinc-100 py-16">
         <div className="max-w-5xl mx-auto w-full px-6">
-          <figure className="max-w-2xl">
-            <blockquote className="text-lg text-zinc-700 leading-relaxed font-medium">
+          <figure className="max-w-2xl rounded-2xl border border-zinc-100 bg-zinc-50/60 p-8 sm:p-10">
+            <blockquote className="text-zinc-600 leading-relaxed">
               &ldquo;{home.testimonial.quote}&rdquo;
             </blockquote>
-            <figcaption className="mt-4 text-sm text-zinc-400">
-              {home.testimonial.name}, {home.testimonial.title}
+            <figcaption className="mt-6 flex items-center gap-3">
+              {home.testimonial.image && (
+                <Image
+                  src={home.testimonial.image}
+                  alt={home.testimonial.name}
+                  width={56}
+                  height={56}
+                  className="w-11 h-11 rounded-full object-cover shrink-0"
+                />
+              )}
+              <span className="text-sm text-zinc-400">
+                <span className="block font-medium text-zinc-700">{home.testimonial.name}</span>
+                <span className="block">{home.testimonial.title}</span>
+              </span>
             </figcaption>
           </figure>
         </div>
