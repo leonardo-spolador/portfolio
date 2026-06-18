@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Nav from "@/components/nav";
+import Slideshow from "@/components/slideshow";
 import { getCaseBySlug, getAllCases } from "@/lib/mdx";
 
 export const dynamicParams = false;
@@ -62,7 +63,7 @@ function Quote({
   );
 }
 
-const components = { Mockup, Quote };
+const components = { Mockup, Quote, Slideshow };
 
 export default async function CaseStudyPage({
   params,
