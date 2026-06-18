@@ -42,3 +42,6 @@ next-env.d.ts
 
 # raw people photos staging (web copies live in public/cases/design-cop/people)
 /cop-people/
+
+# raw portrait source (web copy lives in public/cases/about)
+/leonardo-spolador-ribeiros.jpg

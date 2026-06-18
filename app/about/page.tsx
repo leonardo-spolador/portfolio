@@ -31,8 +31,8 @@ export default function AboutPage() {
             <Image
               src={about.portrait.src}
               alt={about.portrait.alt}
-              width={600}
-              height={600}
+              width={926}
+              height={1200}
               className="w-full h-auto rounded-lg"
             />
             <p className="mt-4 text-sm text-zinc-400 leading-relaxed">
