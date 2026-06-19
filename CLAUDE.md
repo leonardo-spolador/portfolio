@@ -38,3 +38,12 @@
 - Target audience: Lead Designer / Head of Design hiring managers at energy tech scaleups
 - Tone: direct, calm authority, no filler phrases, no em dashes
 - Key numbers to surface: 48% ACV increase, €1.6M revenue growth, 50% faster UI execution
+
+## Context files
+- CLAUDE.md — this file, project rules and conventions
+- file-tree.md — full file structure reference
+
+## Branch strategy
+- main — production, deployed to Vercel automatically
+- feature/* — experimental work, never merged without review
+- Always create a feature branch before starting new visual experiments

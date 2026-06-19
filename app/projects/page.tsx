@@ -10,7 +10,7 @@ export default function ProjectsPage() {
       <Nav />
 
       <section className="max-w-5xl mx-auto w-full px-6 pt-24 pb-20">
-        <h1 className="text-3xl font-semibold tracking-tight mb-3">Work</h1>
+        <h1 className="font-heading text-5xl font-normal tracking-tight sm:text-6xl mb-3">Work</h1>
         <p className="text-base text-zinc-500 max-w-lg leading-relaxed mb-16">
           Selected case studies from energy systems, design leadership, and product strategy.
         </p>
@@ -25,7 +25,7 @@ export default function ProjectsPage() {
               <span className="text-xs font-medium text-zinc-400 uppercase tracking-wide">
                 {c.company}
               </span>
-              <h2 className="text-xl font-semibold leading-snug text-zinc-900">
+              <h2 className="font-heading text-2xl font-semibold leading-snug text-zinc-900">
                 {c.title}
               </h2>
               <p className="text-sm text-zinc-400">{c.period} · {c.domain}</p>
