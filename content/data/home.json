@@ -32,6 +32,7 @@
     }
   ],
   "tagline": "Designing at every scale.",
+  "coming_soon_label": "Coming soon",
   "positioning": [
     "My work has been in energy systems for the past several years: predictive battery analytics, wind farm operations, grid-connected platforms. Environments where software is the infrastructure people depend on to make real decisions. Where a missed risk signal, a wrong maintenance call, or an opaque dataset has consequences in the physical world.",
     "That context shapes how I think about design — not as screens, but as a system for turning complexity into clarity.",
@@ -44,7 +45,8 @@
       "tags": "Battery Analytics · B2B SaaS · 3 years",
       "description": "Shaped product strategy and earned design influence without authority — from a single State of Health chart to TWAICE's flagship product.",
       "image": "/cases/twaice/performance-manager-1.jpg",
-      "href": "/projects/twaice"
+      "href": "/projects/twaice",
+      "coming_soon": false
     },
     {
       "title": "Designing for trust in a market where trust is the product",
@@ -52,7 +54,8 @@
       "tags": "Mobil Mexico · Consumer Loyalty · Mobile",
       "description": "Research-led design under vendor resistance. Defended a mobile-first direction backed by market data — from discovery through usability validation.",
       "image": "/cases/mobil-mexico/app-screens.png",
-      "href": "/projects/mobil-mexico"
+      "href": "/projects/mobil-mexico",
+      "coming_soon": false
     },
     {
       "title": "The program I built to make myself unnecessary",
@@ -60,7 +63,8 @@
       "tags": "Design Community of Practice · Leadership",
       "description": "Grew design capability across 100+ people in a global organisation. The program kept running after I left.",
       "image": "/cases/design-cop/slides/slide-01.jpg",
-      "href": "/projects/design-cop"
+      "href": "/projects/design-cop",
+      "coming_soon": false
     },
     {
       "title": "Designing operational clarity for the people who run wind farms",
@@ -68,7 +72,8 @@
       "tags": "Wind Operations · B2B SaaS · Current",
       "description": "Unifying fragmented legacy workflows into a coherent operational platform. Case study in progress.",
       "image": "/cases/shoreline/roi-calculator.png",
-      "href": "/projects/shoreline"
+      "href": "/projects/shoreline",
+      "coming_soon": true
     }
   ],
   "testimonial": {

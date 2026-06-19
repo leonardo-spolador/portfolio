@@ -78,33 +78,60 @@ export default function Home() {
       <section className="border-t border-zinc-100 py-16">
         <div className="max-w-5xl mx-auto w-full px-6">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-            {home.case_studies.map((card) => (
-              <Link
-                key={card.href}
-                href={card.href}
-                className="group flex flex-col gap-4 rounded-xl border border-zinc-100 overflow-hidden hover:border-zinc-300 transition-colors"
-              >
-                <div className="relative aspect-[16/10] overflow-hidden bg-zinc-50">
-                  <Image
-                    src={card.image}
-                    alt={card.title}
-                    width={800}
-                    height={500}
-                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
-                  />
-                </div>
-                <div className="flex flex-col gap-2 px-5 pb-6">
-                  <span className="text-xs font-medium text-zinc-400 uppercase tracking-wide">
-                    {card.company}
-                  </span>
-                  <h3 className="text-base font-semibold leading-snug text-zinc-900 group-hover:text-zinc-600 transition-colors">
-                    {card.title}
-                  </h3>
-                  <p className="text-xs text-zinc-400">{card.tags}</p>
-                  <p className="text-sm text-zinc-500 leading-relaxed mt-1">{card.description}</p>
-                </div>
-              </Link>
-            ))}
+            {home.case_studies.map((card) => {
+              const body = (
+                <>
+                  <div className="relative aspect-[16/10] overflow-hidden bg-zinc-50">
+                    {card.coming_soon ? (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <span className="text-xs font-medium uppercase tracking-wide text-zinc-400">
+                          {home.coming_soon_label}
+                        </span>
+                      </div>
+                    ) : (
+                      <Image
+                        src={card.image}
+                        alt={card.title}
+                        width={800}
+                        height={500}
+                        className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                      />
+                    )}
+                  </div>
+                  <div className="flex flex-col gap-2 px-5 pb-6">
+                    <span className="text-xs font-medium text-zinc-400 uppercase tracking-wide">
+                      {card.company}
+                    </span>
+                    <h3 className="text-base font-semibold leading-snug text-zinc-900 group-hover:text-zinc-600 transition-colors">
+                      {card.title}
+                    </h3>
+                    <p className="text-xs text-zinc-400">{card.tags}</p>
+                    <p className="text-sm text-zinc-500 leading-relaxed mt-1">{card.description}</p>
+                  </div>
+                </>
+              );
+
+              if (card.coming_soon) {
+                return (
+                  <div
+                    key={card.href}
+                    className="flex flex-col gap-4 rounded-xl border border-zinc-100 overflow-hidden"
+                  >
+                    {body}
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={card.href}
+                  href={card.href}
+                  className="group flex flex-col gap-4 rounded-xl border border-zinc-100 overflow-hidden hover:border-zinc-300 transition-colors"
+                >
+                  {body}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
