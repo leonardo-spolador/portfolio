@@ -19,7 +19,7 @@ export default function AboutPage() {
       </section>
 
       {/* Portrait + narrative */}
-      <section className="border-t border-zinc-100 py-16">
+      <section className="border-t border-zinc-200 py-16">
         <div className="max-w-5xl mx-auto w-full px-6 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-16 items-start">
           <div className="flex flex-col gap-6">
             {about.narrative.map((paragraph, i) => (
@@ -46,7 +46,7 @@ export default function AboutPage() {
       </section>
 
       {/* Career arc */}
-      <section className="border-t border-zinc-100 py-16">
+      <section className="border-t border-zinc-200 py-16">
         <div className="max-w-5xl mx-auto w-full px-6 grid grid-cols-1 gap-8 sm:grid-cols-[200px_1fr]">
           <h2 className="font-heading text-sm font-semibold uppercase tracking-wide text-zinc-400 pt-1">
             {about.career_arc.heading}
@@ -62,7 +62,7 @@ export default function AboutPage() {
       </section>
 
       {/* Three threads */}
-      <section className="border-t border-zinc-100 py-16">
+      <section className="border-t border-zinc-200 py-16">
         <div className="max-w-5xl mx-auto w-full px-6">
           <h2 className="font-heading text-sm font-semibold uppercase tracking-wide text-zinc-400 mb-10">
             Three threads
@@ -84,7 +84,7 @@ export default function AboutPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="border-t border-zinc-100 py-16">
+      <section className="border-t border-zinc-200 py-16">
         <div className="max-w-5xl mx-auto w-full px-6">
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
             {about.testimonials.map((t) => (
@@ -117,7 +117,7 @@ export default function AboutPage() {
       </section>
 
       {/* Contact CTA */}
-      <section className="border-t border-zinc-100 py-20">
+      <section className="border-t border-zinc-200 py-20">
         <div className="max-w-5xl mx-auto w-full px-6 flex flex-col gap-5 max-w-2xl">
           <h2 className="font-heading text-3xl font-semibold leading-snug max-w-2xl">
             {about.contact.heading}

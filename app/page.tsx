@@ -43,7 +43,7 @@ export default function Home() {
       </section>
 
       {/* Outcomes bar */}
-      <section className="border-t border-zinc-100 py-14">
+      <section className="border-t border-black/10 py-14">
         <div className="max-w-5xl mx-auto w-full px-6">
           <div className="grid grid-cols-2 gap-y-10 sm:grid-cols-4">
             {home.outcomes.map((item) => (
@@ -56,17 +56,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tagline */}
-      <section className="border-t border-zinc-100 py-16">
-        <div className="max-w-5xl mx-auto w-full px-6">
-          <p className="text-2xl font-medium text-zinc-400">{home.tagline}</p>
-        </div>
-      </section>
-
       {/* Positioning statement */}
-      <section className="border-t border-zinc-100 py-16">
+      <section className="border-t border-black/10 py-16">
         <div className="max-w-5xl mx-auto w-full px-6">
           <div className="max-w-2xl flex flex-col gap-6">
+            <h2 className="font-heading text-2xl font-semibold text-zinc-900">{home.tagline}</h2>
             {home.positioning.map((paragraph, i) => (
               <p key={i} className="text-base text-zinc-600 leading-relaxed">
                 {paragraph}
@@ -77,7 +71,7 @@ export default function Home() {
       </section>
 
       {/* Case study cards */}
-      <section className="border-t border-zinc-100 py-16">
+      <section className="border-t border-black/10 py-16">
         <div className="max-w-5xl mx-auto w-full px-6">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
             {home.case_studies.map((card) => {
@@ -128,7 +122,7 @@ export default function Home() {
                 <Link
                   key={card.href}
                   href={card.href}
-                  className="group flex flex-col gap-4 rounded-xl border border-zinc-100 overflow-hidden hover:border-zinc-300 hover:bg-white transition-colors"
+                  className="group flex flex-col gap-4 rounded-xl border border-zinc-100 overflow-hidden hover:border-transparent hover:bg-white transition-colors"
                 >
                   {body}
                 </Link>
@@ -139,7 +133,7 @@ export default function Home() {
       </section>
 
       {/* Testimonial */}
-      <section className="border-t border-zinc-100 py-16">
+      <section className="border-t border-black/10 py-16">
         <div className="max-w-5xl mx-auto w-full px-6">
           <figure className="max-w-2xl rounded-2xl border border-zinc-100 bg-zinc-50/60 p-8 sm:p-10">
             <blockquote className="text-zinc-600 leading-relaxed">
@@ -165,7 +159,7 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section className="border-t border-zinc-100 py-20">
+      <section className="border-t border-black/10 py-20">
         <div className="max-w-5xl mx-auto w-full px-6 flex flex-col gap-5 max-w-2xl">
           <h2 className="font-heading text-3xl font-semibold leading-snug max-w-2xl">
             {home.contact.heading}
