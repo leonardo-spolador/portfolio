@@ -5,48 +5,50 @@ import home from "@/content/data/home.json";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col text-zinc-900">
+    <div className="min-h-screen flex flex-col text-zinc-900 bg-[#EDF3E8]">
       <Nav />
 
       {/* Hero */}
-      <section className="max-w-5xl mx-auto w-full px-6 pt-24 pb-20">
-        <Image
-          src={home.hero.avatar}
-          alt={home.hero.name}
-          width={72}
-          height={72}
-          className="w-16 h-16 rounded-full object-cover mb-6"
-          priority
-        />
-        <h1 className="text-4xl font-semibold tracking-tight leading-tight max-w-2xl sm:text-5xl mb-6">
-          {home.hero.headline}
-        </h1>
-        <p className="text-lg text-zinc-500 leading-relaxed max-w-xl mb-10">
-          {home.hero.subheadline}
-        </p>
-        <div className="flex flex-wrap items-center gap-3">
-          <Link
-            href={home.hero.cta_primary.href}
-            className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-700 transition-colors"
-          >
-            {home.hero.cta_primary.label}
-          </Link>
-          <a
-            href={home.hero.cta_secondary.href}
-            className="inline-flex items-center justify-center rounded-full border border-zinc-300 px-5 py-2.5 text-sm font-medium text-zinc-900 hover:border-zinc-500 transition-colors"
-          >
-            {home.hero.cta_secondary.label}
-          </a>
+      <section className="relative overflow-hidden">
+        <div className="relative z-10 max-w-5xl mx-auto w-full px-6 pt-24 pb-20">
+          <Image
+            src={home.hero.avatar}
+            alt={home.hero.name}
+            width={72}
+            height={72}
+            className="w-16 h-16 rounded-full object-cover mb-6"
+            priority
+          />
+          <h1 className="font-heading text-4xl font-normal tracking-tight leading-tight max-w-2xl sm:text-[60px] mb-6">
+            {home.hero.headline}
+          </h1>
+          <p className="text-lg text-zinc-500 leading-relaxed max-w-xl mb-10">
+            {home.hero.subheadline}
+          </p>
+          <div className="flex flex-wrap items-center gap-3">
+            <Link
+              href={home.hero.cta_primary.href}
+              className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-700 transition-colors"
+            >
+              {home.hero.cta_primary.label}
+            </Link>
+            <a
+              href={home.hero.cta_secondary.href}
+              className="inline-flex items-center justify-center rounded-full border border-zinc-300 px-5 py-2.5 text-sm font-medium text-zinc-900 hover:border-zinc-500 transition-colors"
+            >
+              {home.hero.cta_secondary.label}
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Outcomes bar */}
-      <section className="border-t border-zinc-100 py-14">
+      <section className="border-t border-black/10 py-14">
         <div className="max-w-5xl mx-auto w-full px-6">
           <div className="grid grid-cols-2 gap-y-10 sm:grid-cols-4">
             {home.outcomes.map((item) => (
               <div key={item.metric} className="flex flex-col gap-1">
-                <span className="text-3xl font-semibold tracking-tight">{item.metric}</span>
+                <span className="font-heading text-[40px] font-semibold tracking-tight">{item.metric}</span>
                 <span className="text-sm text-zinc-500 max-w-[160px] leading-snug">{item.label}</span>
               </div>
             ))}
@@ -54,17 +56,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tagline */}
-      <section className="border-t border-zinc-100 py-16">
-        <div className="max-w-5xl mx-auto w-full px-6">
-          <p className="text-2xl font-medium italic text-zinc-400">{home.tagline}</p>
-        </div>
-      </section>
-
       {/* Positioning statement */}
-      <section className="border-t border-zinc-100 py-16">
+      <section className="border-t border-black/10 py-16">
         <div className="max-w-5xl mx-auto w-full px-6">
           <div className="max-w-2xl flex flex-col gap-6">
+            <h2 className="font-heading text-2xl font-semibold text-zinc-900">{home.tagline}</h2>
             {home.positioning.map((paragraph, i) => (
               <p key={i} className="text-base text-zinc-600 leading-relaxed">
                 {paragraph}
@@ -75,13 +71,13 @@ export default function Home() {
       </section>
 
       {/* Case study cards */}
-      <section className="border-t border-zinc-100 py-16">
+      <section className="border-t border-black/10 py-16">
         <div className="max-w-5xl mx-auto w-full px-6">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
             {home.case_studies.map((card) => {
               const body = (
                 <>
-                  <div className="relative aspect-[16/10] overflow-hidden bg-zinc-50">
+                  <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-zinc-50">
                     {card.coming_soon ? (
                       <div className="w-full h-full flex items-center justify-center">
                         <span className="text-xs font-medium uppercase tracking-wide text-zinc-400">
@@ -102,7 +98,7 @@ export default function Home() {
                     <span className="text-xs font-medium text-zinc-400 uppercase tracking-wide">
                       {card.company}
                     </span>
-                    <h3 className="text-base font-semibold leading-snug text-zinc-900 group-hover:text-zinc-600 transition-colors">
+                    <h3 className="font-heading text-base font-semibold leading-snug text-zinc-900 group-hover:text-zinc-600 transition-colors">
                       {card.title}
                     </h3>
                     <p className="text-xs text-zinc-400">{card.tags}</p>
@@ -126,7 +122,7 @@ export default function Home() {
                 <Link
                   key={card.href}
                   href={card.href}
-                  className="group flex flex-col gap-4 rounded-xl border border-zinc-100 overflow-hidden hover:border-zinc-300 transition-colors"
+                  className="group flex flex-col gap-4 rounded-xl border border-zinc-100 overflow-hidden hover:border-transparent hover:bg-white transition-colors"
                 >
                   {body}
                 </Link>
@@ -137,7 +133,7 @@ export default function Home() {
       </section>
 
       {/* Testimonial */}
-      <section className="border-t border-zinc-100 py-16">
+      <section className="border-t border-black/10 py-16">
         <div className="max-w-5xl mx-auto w-full px-6">
           <figure className="max-w-2xl rounded-2xl border border-zinc-100 bg-zinc-50/60 p-8 sm:p-10">
             <blockquote className="text-zinc-600 leading-relaxed">
@@ -163,9 +159,9 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section className="border-t border-zinc-100 py-20">
+      <section className="border-t border-black/10 py-20">
         <div className="max-w-5xl mx-auto w-full px-6 flex flex-col gap-5 max-w-2xl">
-          <h2 className="text-2xl font-semibold leading-snug max-w-xl">
+          <h2 className="font-heading text-3xl font-semibold leading-snug max-w-2xl">
             {home.contact.heading}
           </h2>
           <p className="text-base text-zinc-500 leading-relaxed max-w-lg">

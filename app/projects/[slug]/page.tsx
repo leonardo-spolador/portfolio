@@ -92,13 +92,13 @@ export default async function CaseStudyPage({
         <span className="text-xs font-medium text-zinc-400 uppercase tracking-wide">
           {frontmatter.company}
         </span>
-        <h1 className="text-4xl font-semibold tracking-tight leading-tight mt-3 mb-2 max-w-2xl">
+        <h1 className="font-heading text-4xl font-semibold tracking-tight leading-tight mt-3 mb-2 max-w-2xl">
           {frontmatter.title}
         </h1>
         <p className="text-lg text-zinc-500 mb-10">{frontmatter.subtitle}</p>
 
         {/* Metadata */}
-        <dl className="grid grid-cols-2 gap-x-12 gap-y-4 sm:grid-cols-4 border-t border-zinc-100 pt-8">
+        <dl className="grid grid-cols-2 gap-x-12 gap-y-4 sm:grid-cols-4 border-t border-zinc-200 pt-8">
           {[
             { label: "Role", value: frontmatter.role },
             { label: "Period", value: frontmatter.period },
@@ -113,7 +113,7 @@ export default async function CaseStudyPage({
       </section>
 
       {/* Outcomes */}
-      <section className="border-t border-zinc-100 py-14">
+      <section className="border-t border-zinc-200 py-14">
         <div className="max-w-5xl mx-auto w-full px-6">
           <div className="grid grid-cols-2 gap-y-10 sm:grid-cols-4">
             {frontmatter.outcomes.map((item) => (
@@ -127,17 +127,17 @@ export default async function CaseStudyPage({
       </section>
 
       {/* MDX Content */}
-      <article className="border-t border-zinc-100 py-16">
+      <article className="border-t border-zinc-200 py-16">
         <div className="max-w-5xl mx-auto w-full px-6">
           <div className="prose prose-zinc prose-base
             prose-headings:font-semibold prose-headings:tracking-tight
             prose-h2:text-xl prose-h2:mt-12 prose-h2:mb-4
             prose-h3:text-base prose-h3:mt-8 prose-h3:mb-3
             prose-p:text-zinc-600 prose-p:leading-relaxed
-            prose-blockquote:border-l-2 prose-blockquote:border-zinc-200
+            prose-blockquote:border-l-2 prose-blockquote:border-zinc-100
             prose-blockquote:pl-4 prose-blockquote:text-zinc-500 prose-blockquote:not-italic
             prose-strong:text-zinc-900 prose-strong:font-semibold
-            prose-hr:border-zinc-100
+            prose-hr:border-zinc-200
             max-w-none">
             <MDXRemote source={content} components={components} />
           </div>
@@ -145,7 +145,7 @@ export default async function CaseStudyPage({
       </article>
 
       {/* Footer CTA */}
-      <section className="border-t border-zinc-100 py-16">
+      <section className="border-t border-zinc-200 py-16">
         <div className="max-w-5xl mx-auto w-full px-6 flex flex-col gap-4">
           <p className="text-lg font-semibold">Looking at a similar challenge?</p>
           <div className="flex flex-wrap gap-3">
