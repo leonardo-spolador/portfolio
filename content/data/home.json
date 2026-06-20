@@ -36,7 +36,7 @@
   "positioning": [
     "My work has been in energy systems for the past several years: predictive battery analytics, wind farm operations, grid-connected platforms. Environments where software is the infrastructure people depend on to make real decisions. Where a missed risk signal, a wrong maintenance call, or an opaque dataset has consequences in the physical world.",
     "That context shapes how I think about design — not as screens, but as a system for turning complexity into clarity.",
-    "Building the right conditions for that work matters as much as doing it. I co-founded two companies early in my career, and what I learned is that a team is itself a system. One that gets stronger when people have room to grow, experiment, and find their best contribution. My way of leading is side by side: close to the craft, working with the team, keeping direction clear enough that people can move fast with confidence."
+    "Building the right conditions for that work matters as much as doing it. At ExxonMobil, that meant building a Design Community of Practice that reached 100 people across product, engineering, and PM — and kept running after I left. I co-founded two companies early in my career, and what I learned is that a team is itself a system. One that gets stronger when people have room to grow, experiment, and find their best contribution. My way of leading is side by side: close to the craft, working with the team, keeping direction clear enough that people can move fast with confidence."
   ],
   "case_studies": [
     {
@@ -49,21 +49,21 @@
       "coming_soon": false
     },
     {
+      "title": "The program I built to make myself unnecessary",
+      "company": "ExxonMobil",
+      "tags": "Design Community of Practice · Leadership",
+      "description": "Grew design capability across 100+ people in a global organisation. The program kept running after I left.",
+      "image": "/cases/design-cop/people_EM.jpg",
+      "href": "/projects/design-cop",
+      "coming_soon": false
+    },
+    {
       "title": "Designing for trust in a market where trust is the product",
       "company": "ExxonMobil",
       "tags": "Mobil Mexico · Consumer Loyalty · Mobile",
       "description": "Research-led design under vendor resistance. Defended a mobile-first direction backed by market data — from discovery through usability validation.",
       "image": "/cases/mobil-mexico/app-screens.png",
       "href": "/projects/mobil-mexico",
-      "coming_soon": false
-    },
-    {
-      "title": "The program I built to make myself unnecessary",
-      "company": "ExxonMobil",
-      "tags": "Design Community of Practice · Leadership",
-      "description": "Grew design capability across 100+ people in a global organisation. The program kept running after I left.",
-      "image": "/cases/design-cop/slides/slide-01.jpg",
-      "href": "/projects/design-cop",
       "coming_soon": false
     },
     {
@@ -84,7 +84,7 @@
   },
   "contact": {
     "heading": "If the problem involves complex systems and people making real decisions under pressure — that's the conversation I'm built for.",
-    "body": "If you're building operational software for energy systems — or something equally complex — and thinking about what design leadership looks like at your stage, I'd like to talk.",
+    "body": "If you're building software for energy systems — platforms that operators, utilities, or consumers depend on to make real decisions — and thinking about what design leadership looks like at your stage, I'd like to talk.",
     "cta": {
       "label": "Get in touch",
       "href": "mailto:leonardo.spolador@gmail.com"

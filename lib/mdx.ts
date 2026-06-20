@@ -5,6 +5,7 @@ import matter from "gray-matter";
 const casesDir = path.join(process.cwd(), "content/cases");
 
 export type CaseFrontmatter = {
+  order: number;
   title: string;
   subtitle: string;
   company: string;
@@ -17,11 +18,13 @@ export type CaseFrontmatter = {
 
 export function getAllCases(): CaseFrontmatter[] {
   const files = fs.readdirSync(casesDir).filter((f) => f.endsWith(".mdx"));
-  return files.map((file) => {
-    const source = fs.readFileSync(path.join(casesDir, file), "utf8");
-    const { data } = matter(source);
-    return { ...(data as CaseFrontmatter), slug: file.replace(".mdx", "") };
-  });
+  return files
+    .map((file) => {
+      const source = fs.readFileSync(path.join(casesDir, file), "utf8");
+      const { data } = matter(source);
+      return { ...(data as CaseFrontmatter), slug: file.replace(".mdx", "") };
+    })
+    .sort((a, b) => a.order - b.order);
 }
 
 export function getCaseBySlug(slug: string): {
