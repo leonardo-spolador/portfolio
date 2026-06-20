@@ -34,6 +34,23 @@ export default function ProjectsPage() {
           </div>
         </section>
       ))}
+
+      <section className="border-t border-zinc-200">
+        <div className="max-w-5xl mx-auto w-full px-6">
+          <div className="flex flex-col gap-2 py-8">
+            <span className="text-xs font-medium text-zinc-400 uppercase tracking-wide">
+              Shoreline Wind
+            </span>
+            <h2 className="font-heading text-2xl font-semibold leading-snug text-zinc-900">
+              Designing operational clarity for the people who run wind farms
+            </h2>
+            <p className="text-sm text-zinc-400">Current · Wind Operations · B2B SaaS</p>
+            <span className="text-xs font-medium uppercase tracking-wide text-zinc-400 mt-1">
+              Coming soon
+            </span>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
