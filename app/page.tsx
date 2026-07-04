@@ -59,12 +59,12 @@ export default function Home() {
       {/* Positioning statement */}
       <section className="border-t border-black/10 py-16">
         <div className="max-w-5xl mx-auto w-full px-6">
-          <div className="max-w-2xl flex flex-col gap-6">
-            <h2 className="font-heading text-2xl font-semibold text-zinc-900">{home.tagline}</h2>
-            {home.positioning.map((paragraph, i) => (
-              <p key={i} className="text-base text-zinc-600 leading-relaxed">
-                {paragraph}
-              </p>
+          <div className="max-w-2xl flex flex-col gap-10">
+            {home.sections.map((section, i) => (
+              <div key={i} className="flex flex-col gap-3">
+                <h2 className="font-heading text-2xl font-semibold text-zinc-900">{section.heading}</h2>
+                <p className="text-base text-zinc-600 leading-relaxed">{section.body}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -167,12 +167,22 @@ export default function Home() {
           <p className="text-base text-zinc-500 leading-relaxed max-w-lg">
             {home.contact.body}
           </p>
-          <a
-            href={home.contact.cta.href}
-            className="self-start inline-flex items-center justify-center rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-700 transition-colors"
-          >
-            {home.contact.cta.label}
-          </a>
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href={home.contact.cta.href}
+              className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-700 transition-colors"
+            >
+              {home.contact.cta.label}
+            </a>
+            <a
+              href={home.contact.cta_secondary.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-zinc-300 px-5 py-2.5 text-sm font-medium text-zinc-900 hover:border-zinc-500 transition-colors"
+            >
+              {home.contact.cta_secondary.label}
+            </a>
+          </div>
         </div>
       </section>
     </div>

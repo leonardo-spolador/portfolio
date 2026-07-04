@@ -2,8 +2,8 @@
   "hero": {
     "avatar": "/cases/about/portrait.jpg",
     "name": "Leonardo Spolador",
-    "headline": "Designing for the people who run complex energy systems",
-    "subheadline": "Battery analytics, wind operations, grid-connected platforms. Seventeen years of design practice, the last several where a wrong call has real consequences.",
+    "headline": "Most tools stop at the insight. I design the action.",
+    "subheadline": "Battery analytics, wind farm operations, grid-connected platforms. Products where data only earns its place if it guides what people do next, and where a wrong call has consequences in the physical world.",
     "cta_primary": {
       "label": "View the work",
       "href": "/projects"
@@ -15,28 +15,32 @@
   },
   "outcomes": [
     {
-      "metric": "€1.6M",
-      "label": "Revenue growth linked to product design decisions"
-    },
-    {
       "metric": "48%",
-      "label": "Increase in annual contract value"
+      "label": "Annual contract value increase at TWAICE"
     },
     {
-      "metric": "100+",
-      "label": "People trained across design and product CoPs"
+      "metric": "€1.6M",
+      "label": "Revenue growth tied to design decisions"
     },
     {
-      "metric": "80%",
-      "label": "Reduction in time-to-value for critical workflows"
+      "metric": "50%",
+      "label": "Design system cut UI execution time"
     }
   ],
-  "tagline": "Designing at every scale.",
   "coming_soon_label": "Coming soon",
-  "positioning": [
-    "My work has been in energy systems for the past several years: predictive battery analytics, wind farm operations, grid-connected platforms. Environments where software is the infrastructure people depend on to make real decisions. Where a missed risk signal, a wrong maintenance call, or an opaque dataset has consequences in the physical world.",
-    "That context shapes how I think about design — not as screens, but as a system for turning complexity into clarity.",
-    "Building the right conditions for that work matters as much as doing it. At ExxonMobil, that meant building a Design Community of Practice that reached 100 people across product, engineering, and PM — and kept running after I left. I co-founded two companies early in my career, and what I learned is that a team is itself a system. One that gets stronger when people have room to grow, experiment, and find their best contribution. My way of leading is side by side: close to the craft, working with the team, keeping direction clear enough that people can move fast with confidence."
+  "sections": [
+    {
+      "heading": "Data only matters when it guides what people do next.",
+      "body": "Energy teams sit on more data than they can use: analytics platforms, sensor streams, reports, spreadsheets. The hard part was never showing it. At TWAICE I led the move from a monitoring product to one that told operators what to do about what they were seeing, and annual contract value grew 48%. At Shoreline Wind I'm doing it again with simulation tools, where the whole point is that someone acts on what they saw, whether that means committing to a plan or changing it."
+    },
+    {
+      "heading": "I own execution end to end.",
+      "body": "At Shoreline Wind my scope runs well beyond design: product decisions, customer discovery, UX quality, and delivery. I define what gets built from customer conversations, then ship it. Closing the gap between what customers need and what actually ships is the work I do best, and the work I want to keep doing deliberately."
+    },
+    {
+      "heading": "Judgment over tooling.",
+      "body": "Being fluent in Claude Code or Copilot in 2026 is like being fluent in Figma in 2020. Picking the right tool matters, but it isn't the skill. The skill is knowing what to build, what to cut, and when something is ready to ship. When I built the Wind ROI Calculator, Figma Make was the right call, and the tool is live and in use today. Now that I'm shipping functional prototypes and production-ready work, my stack is Claude Code, Copilot, and VS Code against a real codebase. Next year it will be something else. The value was never the tool. It's the judgment deciding what it makes."
+    }
   ],
   "case_studies": [
     {
@@ -83,11 +87,15 @@
     "image": "/cases/twaice/people/oliver-eckstein.jpg"
   },
   "contact": {
-    "heading": "If the problem involves complex systems and people making real decisions under pressure — that's the conversation I'm built for.",
-    "body": "If you're building software for energy systems — platforms that operators, utilities, or consumers depend on to make real decisions — and thinking about what design leadership looks like at your stage, I'd like to talk.",
+    "heading": "Building something in energy or complex B2B? Let's talk.",
+    "body": "I like talking with people working on hard problems in energy, operational software, and complex systems. Whether it's comparing notes, a possible collaboration, or a conversation about what's next, I'm glad to connect.",
     "cta": {
       "label": "Get in touch",
       "href": "mailto:leonardo.spolador@gmail.com"
+    },
+    "cta_secondary": {
+      "label": "Resume",
+      "href": "https://drive.google.com/file/d/1-Zf0v1vS8iEaonxvwqNz0bXSzCv9Shn0/view?usp=sharing"
     }
   }
 }

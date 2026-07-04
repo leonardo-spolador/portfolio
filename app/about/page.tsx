@@ -125,12 +125,22 @@ export default function AboutPage() {
           <p className="text-base text-zinc-500 leading-relaxed max-w-lg">
             {about.contact.body}
           </p>
-          <a
-            href={about.contact.cta.href}
-            className="self-start inline-flex items-center justify-center rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-700 transition-colors"
-          >
-            {about.contact.cta.label}
-          </a>
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href={about.contact.cta.href}
+              className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-700 transition-colors"
+            >
+              {about.contact.cta.label}
+            </a>
+            <a
+              href={about.contact.cta_secondary.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-zinc-300 px-5 py-2.5 text-sm font-medium text-zinc-900 hover:border-zinc-500 transition-colors"
+            >
+              {about.contact.cta_secondary.label}
+            </a>
+          </div>
         </div>
       </section>
     </div>
