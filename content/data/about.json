@@ -47,16 +47,16 @@
     "alt": "Leonardo Spolador"
   },
   "human_moment": "I work best when the problem is genuinely hard and the people around me know their domain. Most of my career has been spent earning the trust of engineers and domain experts by actually understanding what they're dealing with. That's not a positioning strategy. It's just how I prefer to work.\n\nI'm Brazilian, based in Garching bei München. I've been in Germany long enough to know that the directness I value in technical conversations is not considered unusual here.",
+  "resume": {
+    "label": "Resume",
+    "href": "https://drive.google.com/file/d/1-Zf0v1vS8iEaonxvwqNz0bXSzCv9Shn0/view?usp=sharing"
+  },
   "contact": {
     "heading": "Building something in energy or complex B2B? Let's talk.",
     "body": "I like talking with people working on hard problems in energy, operational software, and complex systems. Whether it's comparing notes, a possible collaboration, or a conversation about what's next, I'm glad to connect.",
     "cta": {
       "label": "Get in touch",
       "href": "mailto:leonardo.spolador@gmail.com"
-    },
-    "cta_secondary": {
-      "label": "Resume",
-      "href": "https://drive.google.com/file/d/1-Zf0v1vS8iEaonxvwqNz0bXSzCv9Shn0/view?usp=sharing"
     }
   }
 }

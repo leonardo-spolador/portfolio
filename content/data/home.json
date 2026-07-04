@@ -2,7 +2,10 @@
   "hero": {
     "avatar": "/cases/about/portrait.jpg",
     "name": "Leonardo Spolador",
-    "headline": "Most tools stop at the insight. I design the action.",
+    "headline": [
+      "Most tools stop at the insight.",
+      "I design the action."
+    ],
     "subheadline": "Battery analytics, wind farm operations, grid-connected platforms. Products where data only earns its place if it guides what people do next, and where a wrong call has consequences in the physical world.",
     "cta_primary": {
       "label": "View the work",
@@ -92,10 +95,6 @@
     "cta": {
       "label": "Get in touch",
       "href": "mailto:leonardo.spolador@gmail.com"
-    },
-    "cta_secondary": {
-      "label": "Resume",
-      "href": "https://drive.google.com/file/d/1-Zf0v1vS8iEaonxvwqNz0bXSzCv9Shn0/view?usp=sharing"
     }
   }
 }
