@@ -10,7 +10,7 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="relative z-10 max-w-5xl mx-auto w-full px-6 pt-24 pb-20">
+        <div className="relative z-10 page-container pt-24 pb-20">
           <Image
             src={home.hero.avatar}
             alt={home.hero.name}
@@ -48,7 +48,7 @@ export default function Home() {
 
       {/* Outcomes bar */}
       <section className="border-t border-black/10 py-14">
-        <div className="max-w-5xl mx-auto w-full px-6">
+        <div className="page-container">
           <div className="grid grid-cols-2 gap-y-10 sm:grid-cols-3">
             {home.outcomes.map((item) => (
               <div key={item.metric} className="flex flex-col gap-1">
@@ -63,7 +63,7 @@ export default function Home() {
       {/* Positioning sections */}
       {home.sections.map((section, i) => (
         <section key={i} className="border-t border-black/10 py-16">
-          <div className="max-w-5xl mx-auto w-full px-6">
+          <div className="page-container">
             <div className="max-w-2xl flex flex-col gap-3">
               <h2 className="font-heading text-2xl font-semibold text-zinc-900">{section.heading}</h2>
               <p className="text-base text-zinc-600 leading-relaxed">{section.body}</p>
@@ -74,7 +74,7 @@ export default function Home() {
 
       {/* Case study cards */}
       <section className="border-t border-black/10 py-16">
-        <div className="max-w-5xl mx-auto w-full px-6">
+        <div className="page-container">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
             {home.case_studies.map((card) => {
               const body = (
@@ -136,7 +136,7 @@ export default function Home() {
 
       {/* Testimonial */}
       <section className="border-t border-black/10 py-16">
-        <div className="max-w-5xl mx-auto w-full px-6">
+        <div className="page-container">
           <figure className="max-w-2xl rounded-2xl border border-zinc-100 bg-zinc-50/60 p-8 sm:p-10">
             <blockquote className="text-zinc-600 leading-relaxed">
               &ldquo;{home.testimonial.quote}&rdquo;
@@ -162,7 +162,7 @@ export default function Home() {
 
       {/* Contact CTA */}
       <section className="border-t border-black/10 py-20">
-        <div className="max-w-5xl mx-auto w-full px-6 flex flex-col gap-5 max-w-2xl">
+        <div className="page-container flex flex-col gap-5">
           <h2 className="font-heading text-3xl font-semibold leading-snug max-w-2xl">
             {home.contact.heading}
           </h2>

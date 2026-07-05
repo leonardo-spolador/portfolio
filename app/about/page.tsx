@@ -9,7 +9,7 @@ export default function AboutPage() {
       <Nav />
 
       {/* Opening */}
-      <section className="max-w-5xl mx-auto w-full px-6 pt-24 pb-16">
+      <section className="page-container pt-24 pb-16">
         <h1 className="font-heading text-5xl font-normal tracking-tight leading-tight max-w-xl sm:text-6xl mb-4">
           {about.headline}
         </h1>
@@ -28,7 +28,7 @@ export default function AboutPage() {
 
       {/* Portrait + narrative */}
       <section className="border-t border-zinc-200 py-16">
-        <div className="max-w-5xl mx-auto w-full px-6 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-16 items-start">
+        <div className="page-container grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-16 items-start">
           <div className="flex flex-col gap-6">
             {about.narrative.map((paragraph, i) => (
               <p key={i} className="text-base text-zinc-600 leading-relaxed">
@@ -55,7 +55,7 @@ export default function AboutPage() {
 
       {/* Career arc */}
       <section className="border-t border-zinc-200 py-16">
-        <div className="max-w-5xl mx-auto w-full px-6 grid grid-cols-1 gap-8 sm:grid-cols-[200px_1fr]">
+        <div className="page-container grid grid-cols-1 gap-8 sm:grid-cols-[200px_1fr]">
           <h2 className="font-heading text-sm font-semibold uppercase tracking-wide text-zinc-400 pt-1">
             {about.career_arc.heading}
           </h2>
@@ -71,7 +71,7 @@ export default function AboutPage() {
 
       {/* Three threads */}
       <section className="border-t border-zinc-200 py-16">
-        <div className="max-w-5xl mx-auto w-full px-6">
+        <div className="page-container">
           <h2 className="font-heading text-sm font-semibold uppercase tracking-wide text-zinc-400 mb-10">
             Three threads
           </h2>
@@ -93,7 +93,7 @@ export default function AboutPage() {
 
       {/* Testimonials */}
       <section className="border-t border-zinc-200 py-16">
-        <div className="max-w-5xl mx-auto w-full px-6">
+        <div className="page-container">
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
             {about.testimonials.map((t) => (
               <figure
@@ -126,7 +126,7 @@ export default function AboutPage() {
 
       {/* Contact CTA */}
       <section className="border-t border-zinc-200 py-20">
-        <div className="max-w-5xl mx-auto w-full px-6 flex flex-col gap-5 max-w-2xl">
+        <div className="page-container flex flex-col gap-5">
           <h2 className="font-heading text-3xl font-semibold leading-snug max-w-2xl">
             {about.contact.heading}
           </h2>

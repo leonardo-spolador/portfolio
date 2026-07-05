@@ -88,7 +88,7 @@ export default async function CaseStudyPage({
       <Nav />
 
       {/* Header */}
-      <section className="max-w-5xl mx-auto w-full px-6 pt-24 pb-16">
+      <section className="page-container pt-24 pb-16">
         <span className="text-xs font-medium text-zinc-400 uppercase tracking-wide">
           {frontmatter.company}
         </span>
@@ -114,7 +114,7 @@ export default async function CaseStudyPage({
 
       {/* Outcomes */}
       <section className="border-t border-zinc-200 py-14">
-        <div className="max-w-5xl mx-auto w-full px-6">
+        <div className="page-container">
           <div className="grid grid-cols-2 gap-y-10 sm:grid-cols-4">
             {frontmatter.outcomes.map((item) => (
               <div key={item.metric} className="flex flex-col gap-1">
@@ -128,7 +128,7 @@ export default async function CaseStudyPage({
 
       {/* MDX Content */}
       <article className="border-t border-zinc-200 py-16">
-        <div className="max-w-5xl mx-auto w-full px-6">
+        <div className="page-container">
           <div className="prose prose-zinc prose-base
             prose-headings:font-semibold prose-headings:tracking-tight
             prose-h2:text-xl prose-h2:mt-12 prose-h2:mb-4
@@ -146,7 +146,7 @@ export default async function CaseStudyPage({
 
       {/* Footer CTA */}
       <section className="border-t border-zinc-200 py-16">
-        <div className="max-w-5xl mx-auto w-full px-6 flex flex-col gap-4">
+        <div className="page-container flex flex-col gap-4">
           <p className="text-lg font-semibold">Looking at a similar challenge?</p>
           <div className="flex flex-wrap gap-3">
             <a

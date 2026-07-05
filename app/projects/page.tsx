@@ -9,7 +9,7 @@ export default function ProjectsPage() {
     <div className="min-h-screen flex flex-col text-zinc-900">
       <Nav />
 
-      <section className="max-w-5xl mx-auto w-full px-6 pt-24 pb-16">
+      <section className="page-container pt-24 pb-16">
         <h1 className="font-heading text-5xl font-normal tracking-tight sm:text-6xl mb-3">Work</h1>
         <p className="text-base text-zinc-500 max-w-lg leading-relaxed">
           Selected case studies from energy systems, design leadership, and product strategy.
@@ -18,7 +18,7 @@ export default function ProjectsPage() {
 
       {cases.map((c) => (
         <section key={c.slug} className="border-t border-zinc-200">
-          <div className="max-w-5xl mx-auto w-full px-6">
+          <div className="page-container">
             <Link
               href={`/projects/${c.slug}`}
               className="group flex flex-col gap-2 py-8 hover:opacity-70 transition-opacity"
@@ -36,7 +36,7 @@ export default function ProjectsPage() {
       ))}
 
       <section className="border-t border-zinc-200">
-        <div className="max-w-5xl mx-auto w-full px-6">
+        <div className="page-container">
           <div className="flex flex-col gap-2 py-8">
             <span className="text-xs font-medium text-zinc-400 uppercase tracking-wide">
               Shoreline Wind
