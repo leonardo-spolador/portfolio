@@ -30,7 +30,7 @@ export default function AboutPage() {
       </section>
 
       {/* Portrait + narrative */}
-      <section className="border-t border-black/10 py-16">
+      <section className="border-t border-black/10 py-24">
         <div className="page-container grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-16 items-start">
           <div className="flex flex-col gap-6">
             {about.narrative.map((paragraph, i) => (
@@ -38,6 +38,11 @@ export default function AboutPage() {
                 {paragraph}
               </p>
             ))}
+            <p className="text-sm text-zinc-400 leading-relaxed">
+              {about.human_moment.split("\n\n").map((para, i) => (
+                <span key={i} className="block mb-3 last:mb-0">{para}</span>
+              ))}
+            </p>
           </div>
           <div className="order-first sm:order-last">
             <Image
@@ -45,24 +50,19 @@ export default function AboutPage() {
               alt={about.portrait.alt}
               width={926}
               height={1200}
-              className="w-full h-auto rounded-lg"
+              className="w-full aspect-square object-cover object-top rounded-lg"
             />
-            <p className="mt-4 text-sm text-zinc-400 leading-relaxed">
-              {about.human_moment.split("\n\n").map((para, i) => (
-                <span key={i} className="block mb-3 last:mb-0">{para}</span>
-              ))}
-            </p>
           </div>
         </div>
       </section>
 
       {/* Career arc */}
       <section className="border-t border-black/10 py-24">
-        <div className="page-container flex flex-col gap-6 sm:flex-row sm:gap-12">
-          <h2 className="font-heading text-2xl font-semibold text-zinc-900 sm:w-1/2">
+        <div className="page-container flex flex-col gap-8">
+          <h2 className="font-heading text-2xl font-semibold text-zinc-900">
             {about.career_arc.heading}
           </h2>
-          <div className="flex flex-col gap-5 sm:w-1/2">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-12">
             {about.career_arc.body.split("\n\n").map((paragraph, i) => (
               <p key={i} className="text-base text-zinc-600 leading-relaxed">
                 {paragraph}
