@@ -92,7 +92,7 @@ export default async function CaseStudyPage({
         <span className="text-xs font-medium text-zinc-400 uppercase tracking-wide">
           {frontmatter.company}
         </span>
-        <h1 className="font-heading text-4xl font-semibold tracking-tight leading-tight mt-3 mb-2 max-w-2xl">
+        <h1 className="font-heading text-4xl font-semibold tracking-tight leading-tight mt-3 mb-2">
           {frontmatter.title}
         </h1>
         <p className="text-lg text-zinc-500 mb-10">{frontmatter.subtitle}</p>
@@ -119,7 +119,7 @@ export default async function CaseStudyPage({
             {frontmatter.outcomes.map((item) => (
               <div key={item.metric} className="flex flex-col gap-1">
                 <span className="text-3xl font-semibold tracking-tight">{item.metric}</span>
-                <span className="text-sm text-zinc-500 max-w-[160px] leading-snug">{item.label}</span>
+                <span className="text-sm text-zinc-500 leading-snug">{item.label}</span>
               </div>
             ))}
           </div>

@@ -13,7 +13,7 @@ export default function PeopleGrid() {
         <div key={group.label}>
           <h4 className="text-sm font-semibold text-zinc-900">{group.label}</h4>
           {group.caption && (
-            <p className="mt-1 text-sm text-zinc-500 max-w-md">{group.caption}</p>
+            <p className="mt-1 text-sm text-zinc-500">{group.caption}</p>
           )}
           <ul className="mt-5 grid grid-cols-3 gap-x-4 gap-y-6 sm:grid-cols-5 md:grid-cols-7">
             {group.people.map((p) => (

@@ -11,7 +11,7 @@ export default function ProjectsPage() {
 
       <section className="page-container pt-24 pb-16">
         <h1 className="font-heading text-5xl font-normal tracking-tight sm:text-6xl mb-3">Work</h1>
-        <p className="text-base text-zinc-500 max-w-lg leading-relaxed">
+        <p className="text-base text-zinc-500 leading-relaxed">
           Selected case studies from energy systems, design leadership, and product strategy.
         </p>
       </section>

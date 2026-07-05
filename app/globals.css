@@ -119,15 +119,15 @@
 }
 
 /* Responsive lateral margins + content cap — single source of truth */
-:root { --page-margin-inline: 5%;  --page-content-max: 40rem; }
-@media (min-width: 40rem) { :root { --page-margin-inline: 8%;  --page-content-max: 48rem; } }
-@media (min-width: 48rem) { :root { --page-margin-inline: 10%; --page-content-max: 56rem; } }
-@media (min-width: 64rem) { :root { --page-margin-inline: 14%; --page-content-max: 64rem; } }
-@media (min-width: 80rem) { :root { --page-margin-inline: 18%; --page-content-max: 72rem; } }
-@media (min-width: 96rem) { :root { --page-margin-inline: 22%; --page-content-max: 80rem; } }
+:root { --page-margin-inline: 5%; }
+@media (min-width: 40rem) { :root { --page-margin-inline: 8%; } }
+@media (min-width: 48rem) { :root { --page-margin-inline: 10%; } }
+@media (min-width: 64rem) { :root { --page-margin-inline: 14%; } }
+@media (min-width: 80rem) { :root { --page-margin-inline: 18%; } }
+@media (min-width: 96rem) { :root { --page-margin-inline: 22%; } }
 
 .page-container {
-  width: min(calc(100% - 2 * var(--page-margin-inline)), var(--page-content-max));
+  width: calc(100% - 2 * var(--page-margin-inline));
   margin-inline: auto;
 }
 

@@ -19,14 +19,14 @@ export default function Home() {
             className="w-16 h-16 rounded-full object-cover mb-6"
             priority
           />
-          <h1 className="font-heading text-4xl font-normal tracking-tight leading-tight max-w-5xl sm:text-[60px] mb-6">
+          <h1 className="font-heading text-4xl font-normal tracking-tight leading-tight sm:text-[60px] mb-6">
             {home.hero.headline.map((line, i) => (
               <span key={i} className="block">
                 {line}
               </span>
             ))}
           </h1>
-          <p className="text-lg text-zinc-500 leading-relaxed max-w-xl mb-10">
+          <p className="text-lg text-zinc-500 leading-relaxed mb-10">
             {home.hero.subheadline}
           </p>
           <div className="flex flex-wrap items-center gap-3">
@@ -53,7 +53,7 @@ export default function Home() {
             {home.outcomes.map((item) => (
               <div key={item.metric} className="flex flex-col gap-1">
                 <span className="font-heading text-[40px] font-semibold tracking-tight">{item.metric}</span>
-                <span className="text-sm text-zinc-500 max-w-[160px] leading-snug">{item.label}</span>
+                <span className="text-sm text-zinc-500 leading-snug">{item.label}</span>
               </div>
             ))}
           </div>
@@ -64,7 +64,7 @@ export default function Home() {
       {home.sections.map((section, i) => (
         <section key={i} className="border-t border-black/10 py-16">
           <div className="page-container">
-            <div className="max-w-2xl flex flex-col gap-3">
+            <div className="flex flex-col gap-3">
               <h2 className="font-heading text-2xl font-semibold text-zinc-900">{section.heading}</h2>
               <p className="text-base text-zinc-600 leading-relaxed">{section.body}</p>
             </div>
@@ -137,7 +137,7 @@ export default function Home() {
       {/* Testimonial */}
       <section className="border-t border-black/10 py-16">
         <div className="page-container">
-          <figure className="max-w-2xl rounded-2xl border border-zinc-100 bg-zinc-50/60 p-8 sm:p-10">
+          <figure className="rounded-2xl border border-zinc-100 bg-zinc-50/60 p-8 sm:p-10">
             <blockquote className="text-zinc-600 leading-relaxed">
               &ldquo;{home.testimonial.quote}&rdquo;
             </blockquote>
@@ -163,10 +163,10 @@ export default function Home() {
       {/* Contact CTA */}
       <section className="border-t border-black/10 py-20">
         <div className="page-container flex flex-col gap-5">
-          <h2 className="font-heading text-3xl font-semibold leading-snug max-w-2xl">
+          <h2 className="font-heading text-3xl font-semibold leading-snug">
             {home.contact.heading}
           </h2>
-          <p className="text-base text-zinc-500 leading-relaxed max-w-lg">
+          <p className="text-base text-zinc-500 leading-relaxed">
             {home.contact.body}
           </p>
           <a

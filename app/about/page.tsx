@@ -10,10 +10,10 @@ export default function AboutPage() {
 
       {/* Opening */}
       <section className="page-container pt-24 pb-16">
-        <h1 className="font-heading text-5xl font-normal tracking-tight leading-tight max-w-xl sm:text-6xl mb-4">
+        <h1 className="font-heading text-5xl font-normal tracking-tight leading-tight sm:text-6xl mb-4">
           {about.headline}
         </h1>
-        <p className="text-lg text-zinc-500 max-w-xl leading-relaxed">
+        <p className="text-lg text-zinc-500 leading-relaxed">
           {about.subheadline}
         </p>
         <a
@@ -127,10 +127,10 @@ export default function AboutPage() {
       {/* Contact CTA */}
       <section className="border-t border-zinc-200 py-20">
         <div className="page-container flex flex-col gap-5">
-          <h2 className="font-heading text-3xl font-semibold leading-snug max-w-2xl">
+          <h2 className="font-heading text-3xl font-semibold leading-snug">
             {about.contact.heading}
           </h2>
-          <p className="text-base text-zinc-500 leading-relaxed max-w-lg">
+          <p className="text-base text-zinc-500 leading-relaxed">
             {about.contact.body}
           </p>
           <a
