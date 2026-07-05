@@ -72,66 +72,59 @@ export default function Home() {
         </section>
       ))}
 
-      {/* Case study cards */}
-      <section className="border-t border-black/10 py-16">
-        <div className="page-container">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-            {home.case_studies.map((card) => {
-              const body = (
-                <>
-                  <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-zinc-50">
-                    {card.coming_soon ? (
-                      <div className="w-full h-full flex items-center justify-center">
-                        <span className="text-xs font-medium uppercase tracking-wide text-zinc-400">
-                          {home.coming_soon_label}
-                        </span>
-                      </div>
-                    ) : (
-                      <Image
-                        src={card.image}
-                        alt={card.title}
-                        width={800}
-                        height={500}
-                        className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
-                      />
-                    )}
-                  </div>
-                  <div className="flex flex-col gap-2 px-5 pb-6">
-                    <span className="text-xs font-medium text-zinc-400 uppercase tracking-wide">
-                      {card.company}
+      {/* Case study rows */}
+      <section className="border-t border-black/10">
+        {home.case_studies.map((card) => {
+          const inner = (
+            <div className="page-container flex flex-col gap-6 py-12 sm:flex-row sm:items-center sm:gap-12">
+              <div className="flex flex-col gap-2 sm:flex-1">
+                <span className="text-xs font-medium text-zinc-400 uppercase tracking-wide">
+                  {card.company}
+                </span>
+                <h3 className="font-heading text-2xl font-semibold leading-snug text-zinc-900">
+                  {card.title}
+                </h3>
+                <p className="text-xs text-zinc-400">{card.tags}</p>
+                <p className="text-sm text-zinc-500 leading-relaxed mt-1">{card.description}</p>
+              </div>
+              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-zinc-50 sm:w-1/2">
+                {card.coming_soon ? (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <span className="text-xs font-medium uppercase tracking-wide text-zinc-400">
+                      {home.coming_soon_label}
                     </span>
-                    <h3 className="font-heading text-base font-semibold leading-snug text-zinc-900 group-hover:text-zinc-600 transition-colors">
-                      {card.title}
-                    </h3>
-                    <p className="text-xs text-zinc-400">{card.tags}</p>
-                    <p className="text-sm text-zinc-500 leading-relaxed mt-1">{card.description}</p>
                   </div>
-                </>
-              );
+                ) : (
+                  <Image
+                    src={card.image}
+                    alt={card.title}
+                    width={800}
+                    height={500}
+                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300 motion-reduce:transition-none"
+                  />
+                )}
+              </div>
+            </div>
+          );
 
-              if (card.coming_soon) {
-                return (
-                  <div
-                    key={card.href}
-                    className="flex flex-col gap-4 rounded-xl border border-zinc-100 overflow-hidden"
-                  >
-                    {body}
-                  </div>
-                );
-              }
+          if (card.coming_soon) {
+            return (
+              <div key={card.href} className="border-t border-black/10 first:border-t-0">
+                {inner}
+              </div>
+            );
+          }
 
-              return (
-                <Link
-                  key={card.href}
-                  href={card.href}
-                  className="group flex flex-col gap-4 rounded-xl border border-zinc-100 overflow-hidden hover:border-transparent hover:bg-white transition-colors"
-                >
-                  {body}
-                </Link>
-              );
-            })}
-          </div>
-        </div>
+          return (
+            <Link
+              key={card.href}
+              href={card.href}
+              className="group block border-t border-black/10 first:border-t-0 transition-colors duration-200 hover:bg-white focus-visible:bg-white motion-reduce:transition-none"
+            >
+              {inner}
+            </Link>
+          );
+        })}
       </section>
 
       {/* Testimonial */}
