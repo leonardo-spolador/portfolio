@@ -6,6 +6,7 @@ import Nav from "@/components/nav";
 import Slideshow from "@/components/slideshow";
 import PeopleGrid from "@/components/people-grid";
 import { getCaseBySlug, getAllCases } from "@/lib/mdx";
+import cases from "@/content/data/cases.json";
 
 export const dynamicParams = false;
 
@@ -82,43 +83,64 @@ export default async function CaseStudyPage({
   if (!caseData) notFound();
 
   const { frontmatter, content } = caseData;
+  const card = cases.items.find((c) => c.href === `/projects/${slug}`);
 
   return (
     <div className="min-h-screen flex flex-col text-zinc-900 bg-white">
       <Nav />
 
       {/* Header */}
-      <section className="page-container pt-24 pb-16">
-        <span className="text-xs font-medium text-zinc-400 uppercase tracking-wide">
-          {frontmatter.company}
-        </span>
-        <h1 className="font-heading text-4xl font-semibold tracking-tight leading-tight mt-3 mb-2">
-          {frontmatter.title}
-        </h1>
-        <p className="text-lg text-zinc-500 mb-10">{frontmatter.subtitle}</p>
+      <section className="relative overflow-hidden pt-36 pb-24">
+        <div className="page-container text-center">
+          <span className="text-xs font-medium text-zinc-400 uppercase tracking-wide">
+            {frontmatter.company}
+          </span>
+          <h1 className="font-heading text-4xl font-semibold tracking-tight leading-tight sm:text-[60px] mt-4 mb-4">
+            {frontmatter.title}
+          </h1>
+          <p className="text-lg text-zinc-500 leading-relaxed max-w-2xl mx-auto mb-12">
+            {frontmatter.subtitle}
+          </p>
 
-        {/* Metadata */}
-        <dl className="grid grid-cols-2 gap-x-12 gap-y-4 sm:grid-cols-4 border-t border-zinc-200 pt-8">
-          {[
-            { label: "Role", value: frontmatter.role },
-            { label: "Period", value: frontmatter.period },
-            { label: "Domain", value: frontmatter.domain },
-          ].map((item) => (
-            <div key={item.label} className="flex flex-col gap-1">
-              <dt className="text-xs text-zinc-400 uppercase tracking-wide">{item.label}</dt>
-              <dd className="text-sm text-zinc-700 leading-snug">{item.value}</dd>
-            </div>
-          ))}
-        </dl>
+          {/* Metadata */}
+          <dl className="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-black/10">
+            {[
+              { label: "Role", value: frontmatter.role },
+              { label: "Period", value: frontmatter.period },
+              { label: "Domain", value: frontmatter.domain },
+            ].map((item) => (
+              <div key={item.label} className="flex flex-col items-center gap-1 text-center sm:px-6">
+                <dt className="text-xs text-zinc-400 uppercase tracking-wide">{item.label}</dt>
+                <dd className="text-sm text-zinc-700 leading-snug">
+                  {item.value.split(/\s+[·–—→]\s+/).map((part, k) => (
+                    <span key={k} className="block">{part}</span>
+                  ))}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+
+        {card && (
+          <div className="page-container mt-16">
+            <Image
+              src={card.image}
+              alt={card.title}
+              width={1600}
+              height={1000}
+              className="w-full h-auto rounded-xl"
+            />
+          </div>
+        )}
       </section>
 
       {/* Outcomes */}
-      <section className="border-t border-zinc-200 py-14">
+      <section className="border-t border-black/10 py-21">
         <div className="page-container">
-          <div className="grid grid-cols-2 gap-y-10 sm:grid-cols-4">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-4 sm:gap-0 sm:divide-x sm:divide-black/10">
             {frontmatter.outcomes.map((item) => (
-              <div key={item.metric} className="flex flex-col gap-1">
-                <span className="text-3xl font-semibold tracking-tight">{item.metric}</span>
+              <div key={item.metric} className="flex flex-col items-center gap-2 text-center sm:px-6">
+                <span className="font-heading text-5xl font-extralight tracking-tight sm:text-6xl">{item.metric}</span>
                 <span className="text-sm text-zinc-500 leading-snug">{item.label}</span>
               </div>
             ))}
@@ -127,7 +149,7 @@ export default async function CaseStudyPage({
       </section>
 
       {/* MDX Content */}
-      <article className="border-t border-zinc-200 py-16">
+      <article className="border-t border-black/10 py-16">
         <div className="page-container">
           <div className="prose prose-zinc prose-base
             prose-headings:font-semibold prose-headings:tracking-tight
@@ -137,7 +159,7 @@ export default async function CaseStudyPage({
             prose-blockquote:border-l-2 prose-blockquote:border-zinc-100
             prose-blockquote:pl-4 prose-blockquote:text-zinc-500 prose-blockquote:not-italic
             prose-strong:text-zinc-900 prose-strong:font-semibold
-            prose-hr:border-zinc-200
+            prose-hr:border-black/10
             max-w-none">
             <MDXRemote source={content} components={components} />
           </div>
@@ -145,31 +167,33 @@ export default async function CaseStudyPage({
       </article>
 
       {/* Footer CTA */}
-      <section className="border-t border-zinc-200 py-16">
-        <div className="page-container flex flex-col gap-4">
-          <p className="text-lg font-semibold">Looking at a similar challenge?</p>
-          <div className="flex flex-wrap gap-3">
+      <section className="border-t border-black/10 bg-black/75 py-30">
+        <div className="page-container flex flex-col items-center gap-6 text-center">
+          <h2 className="font-heading text-3xl font-semibold leading-snug text-white">
+            Looking at a similar challenge?
+          </h2>
+          <div className="flex flex-wrap items-center justify-center gap-3">
             <a
               href="mailto:leonardo.spolador@gmail.com"
-              className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-700 transition-colors"
+              className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-heading text-lg font-normal text-zinc-900 hover:bg-zinc-200 transition-colors"
             >
-              Contact me
+              Get in touch
             </a>
             <a
               href="https://calendly.com/leonardo-spolador/meeting-with-leonardo-spolador"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-zinc-300 px-5 py-2.5 text-sm font-medium text-zinc-900 hover:border-zinc-500 transition-colors"
+              className="inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 font-heading text-lg font-normal text-white hover:border-white transition-colors"
             >
               Book a conversation
             </a>
-            <Link
-              href="/projects"
-              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-zinc-500 hover:text-zinc-900 transition-colors"
-            >
-              Back to work
-            </Link>
           </div>
+          <Link
+            href="/projects"
+            className="font-heading text-lg font-normal text-white/80 hover:text-white transition-colors"
+          >
+            Back to projects
+          </Link>
         </div>
       </section>
     </div>
