@@ -31,15 +31,17 @@ export default function AboutPage() {
 
       {/* Portrait + narrative */}
       <section className="border-t border-black/10 py-24">
-        <div className="page-container grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-16 items-start">
-          {/* Left: numbered narrative */}
+        <div className="page-container grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-start">
+          {/* Left: numbered narrative + personal note */}
           <div className="flex flex-col">
             {about.narrative.map((section, i) => (
               <div
                 key={i}
                 className="flex gap-6 border-t border-black/10 py-10 first:border-t-0 first:pt-0"
               >
-                <span className="font-heading text-sm text-zinc-400 shrink-0 pt-1">{i + 1}.</span>
+                <span className="font-heading text-sm font-bold text-zinc-900 shrink-0 pt-1">
+                  {i + 1}.
+                </span>
                 <div className="flex flex-col gap-4">
                   {section.split("\n\n").map((para, j) => (
                     <p key={j} className="text-base text-zinc-600 leading-relaxed">
@@ -49,8 +51,15 @@ export default function AboutPage() {
                 </div>
               </div>
             ))}
+            <div className="flex flex-col gap-6 border-t border-black/10 pt-10">
+              {about.human_moment.split("\n\n").map((para, i) => (
+                <p key={i} className="font-heading text-lg font-normal leading-[1.4] text-zinc-700">
+                  {para}
+                </p>
+              ))}
+            </div>
           </div>
-          {/* Center: portrait */}
+          {/* Right: portrait */}
           <div>
             <Image
               src={about.portrait.src}
@@ -59,14 +68,6 @@ export default function AboutPage() {
               height={1200}
               className="w-full h-auto rounded-lg"
             />
-          </div>
-          {/* Right: personal note */}
-          <div className="flex flex-col gap-6">
-            {about.human_moment.split("\n\n").map((para, i) => (
-              <p key={i} className="font-heading text-lg font-normal leading-[1.4] text-zinc-700">
-                {para}
-              </p>
-            ))}
           </div>
         </div>
       </section>
