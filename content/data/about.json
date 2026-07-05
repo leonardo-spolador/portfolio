@@ -2,9 +2,9 @@
   "headline": "Clarity is the floor. Action is the goal.",
   "subheadline": "17 years in design. The last several in energy, where the cost of a bad decision shows up in the physical world.",
   "narrative": [
-    "I've designed predictive battery analytics at TWAICE, wind farm operations software at Shoreline Wind, and energy products at ExxonMobil. The users are engineers and operators who already have plenty of data. What they need is software that turns it into a clear next move: which asset to inspect, which plan to adjust, which risk to act on first.",
-    "That belief has a track record. At TWAICE I led the product's shift from showing battery health data to recommending what to do about it. Annual contract value grew 48%, key products doubled their revenue, and €1.6M in growth traces back to design decisions. The design system I implemented cut UI execution time in half and made frontend implementation 35 to 40% faster. I measure design in outcomes because that is how the companies I work with measure it.",
-    "At Shoreline Wind my role goes beyond design. I'm the person who turns customer needs into build decisions: product calls, discovery and customer relationships, UX quality, delivery, and the product knowledge that holds it all together. That translation layer is thin or missing at most lean scaleups, and it's where products quietly go wrong. Lean teams don't need another layer of management. They need someone who owns execution and raises the quality bar while doing it."
+    "I've designed predictive battery analytics at TWAICE, wind farm operations software at Shoreline Wind, and energy products at ExxonMobil.\n\nThe users are engineers and operators who already have plenty of data. What they need is software that turns it into a clear next move: which asset to inspect, which plan to adjust, which risk to act on first.",
+    "That belief has a track record. At TWAICE I led the product's shift from showing battery health data to recommending what to do about it.\n\nAnnual contract value grew 48%, key products doubled their revenue, and €1.6M in growth traces back to design decisions.\n\nThe design system I implemented cut UI execution time in half and made frontend implementation 35 to 40% faster. I measure design in outcomes because that is how the companies I work with measure it.",
+    "At Shoreline Wind my role goes beyond design. I'm the person who turns customer needs into build decisions: product calls, discovery and customer relationships, UX quality, delivery, and the product knowledge that holds it all together.\n\nThat translation layer is thin or missing at most lean scaleups, and it's where products quietly go wrong.\n\nLean teams don't need another layer of management. They need someone who owns execution and raises the quality bar while doing it."
   ],
   "career_arc": {
     "heading": "Career arc",
@@ -39,7 +39,7 @@
     "src": "/cases/about/portrait.jpg",
     "alt": "Leonardo Spolador"
   },
-  "human_moment": "I work best when the problem is genuinely hard and the people around me know their domain. Most of my career has been spent earning the trust of engineers and domain experts by actually understanding what they're dealing with. That's not a positioning strategy. It's just how I prefer to work.\n\nI'm Brazilian, based in Garching bei München. I've been in Germany long enough to know that the directness I value in technical conversations is not considered unusual here.",
+  "human_moment": "I work best when the problem is genuinely hard and the people around me know their domain.\n\nMost of my career has been spent earning the trust of engineers and domain experts by actually understanding what they're dealing with. That's not a positioning strategy. It's just how I prefer to work.\n\nI'm Brazilian, based in Garching bei München. I've been in Germany long enough to know that the directness I value in technical conversations is not considered unusual here.",
   "resume": {
     "label": "Resume",
     "href": "https://drive.google.com/file/d/1-Zf0v1vS8iEaonxvwqNz0bXSzCv9Shn0/view?usp=sharing"

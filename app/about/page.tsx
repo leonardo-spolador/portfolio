@@ -31,27 +31,42 @@ export default function AboutPage() {
 
       {/* Portrait + narrative */}
       <section className="border-t border-black/10 py-24">
-        <div className="page-container grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-16 items-start">
-          <div className="flex flex-col gap-6">
-            {about.narrative.map((paragraph, i) => (
-              <p key={i} className="text-base text-zinc-600 leading-relaxed">
-                {paragraph}
-              </p>
+        <div className="page-container grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-16 items-start">
+          {/* Left: numbered narrative */}
+          <div className="flex flex-col">
+            {about.narrative.map((section, i) => (
+              <div
+                key={i}
+                className="flex gap-6 border-t border-black/10 py-10 first:border-t-0 first:pt-0"
+              >
+                <span className="font-heading text-sm text-zinc-400 shrink-0 pt-1">{i + 1}.</span>
+                <div className="flex flex-col gap-4">
+                  {section.split("\n\n").map((para, j) => (
+                    <p key={j} className="text-base text-zinc-600 leading-relaxed">
+                      {para}
+                    </p>
+                  ))}
+                </div>
+              </div>
             ))}
-            <p className="text-sm text-zinc-400 leading-relaxed">
-              {about.human_moment.split("\n\n").map((para, i) => (
-                <span key={i} className="block mb-3 last:mb-0">{para}</span>
-              ))}
-            </p>
           </div>
-          <div className="order-first sm:order-last">
+          {/* Center: portrait */}
+          <div>
             <Image
               src={about.portrait.src}
               alt={about.portrait.alt}
               width={926}
               height={1200}
-              className="w-full aspect-square object-cover object-top rounded-lg"
+              className="w-full h-auto rounded-lg"
             />
+          </div>
+          {/* Right: personal note */}
+          <div className="flex flex-col gap-6">
+            {about.human_moment.split("\n\n").map((para, i) => (
+              <p key={i} className="font-heading text-lg font-normal leading-[1.4] text-zinc-700">
+                {para}
+              </p>
+            ))}
           </div>
         </div>
       </section>
