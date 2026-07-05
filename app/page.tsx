@@ -18,19 +18,19 @@ export default function Home() {
               </span>
             ))}
           </h1>
-          <p className="text-lg text-zinc-500 leading-relaxed mb-10 whitespace-pre-line">
+          <p className="text-lg text-zinc-500 leading-relaxed mb-10 whitespace-pre-line max-w-2xl mx-auto">
             {home.hero.subheadline}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Link
               href={home.hero.cta_primary.href}
-              className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-700 transition-colors"
+              className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-6 py-3 font-heading text-lg font-normal text-white hover:bg-zinc-700 transition-colors"
             >
               {home.hero.cta_primary.label}
             </Link>
             <a
               href={home.hero.cta_secondary.href}
-              className="inline-flex items-center justify-center rounded-full border border-zinc-300 px-5 py-2.5 text-sm font-medium text-zinc-900 hover:border-zinc-500 transition-colors"
+              className="inline-flex items-center justify-center rounded-full border border-zinc-300 px-6 py-3 font-heading text-lg font-normal text-zinc-900 hover:border-zinc-500 transition-colors"
             >
               {home.hero.cta_secondary.label}
             </a>
@@ -44,7 +44,7 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-black/10">
             {home.outcomes.map((item) => (
               <div key={item.metric} className="flex flex-col items-center gap-2 text-center sm:px-6">
-                <span className="font-heading text-5xl font-light tracking-tight sm:text-6xl">{item.metric}</span>
+                <span className="font-heading text-5xl font-extralight tracking-tight sm:text-6xl">{item.metric}</span>
                 <span className="text-sm text-zinc-500 leading-snug">{item.label}</span>
               </div>
             ))}
@@ -121,7 +121,7 @@ export default function Home() {
       <section className="border-t border-black/10 py-24">
         <div className="page-container">
           <figure className="border border-zinc-100 bg-zinc-50/60 p-8 sm:p-10">
-            <blockquote className="text-zinc-600 leading-relaxed">
+            <blockquote className="text-2xl font-light leading-[1.4] text-zinc-600">
               &ldquo;{home.testimonial.quote}&rdquo;
             </blockquote>
             <figcaption className="mt-6 flex items-center gap-3">
@@ -149,12 +149,12 @@ export default function Home() {
           <h2 className="font-heading text-3xl font-semibold leading-snug text-white whitespace-pre-line">
             {home.contact.heading}
           </h2>
-          <p className="text-base text-white/80 leading-relaxed whitespace-pre-line">
+          <p className="text-base text-white/80 leading-relaxed whitespace-pre-line max-w-2xl mx-auto">
             {home.contact.body}
           </p>
           <a
             href={home.contact.cta.href}
-            className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-sm font-medium text-zinc-900 hover:bg-zinc-200 transition-colors"
+            className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-heading text-lg font-normal text-zinc-900 hover:bg-zinc-200 transition-colors"
           >
             {home.contact.cta.label}
           </a>
