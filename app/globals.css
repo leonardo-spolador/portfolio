@@ -120,11 +120,11 @@
 
 /* Responsive lateral margins + content cap — single source of truth */
 :root { --page-margin-inline: 5%; }
-@media (min-width: 40rem) { :root { --page-margin-inline: 8%; } }
-@media (min-width: 48rem) { :root { --page-margin-inline: 10%; } }
-@media (min-width: 64rem) { :root { --page-margin-inline: 14%; } }
-@media (min-width: 80rem) { :root { --page-margin-inline: 18%; } }
-@media (min-width: 96rem) { :root { --page-margin-inline: 22%; } }
+@media (min-width: 40rem) { :root { --page-margin-inline: 6%; } }
+@media (min-width: 48rem) { :root { --page-margin-inline: 6%; } }
+@media (min-width: 64rem) { :root { --page-margin-inline: 7%; } }
+@media (min-width: 80rem) { :root { --page-margin-inline: 7%; } }
+@media (min-width: 96rem) { :root { --page-margin-inline: 8%; } }
 
 .page-container {
   width: calc(100% - 2 * var(--page-margin-inline));
