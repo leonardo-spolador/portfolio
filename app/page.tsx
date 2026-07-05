@@ -9,16 +9,8 @@ export default function Home() {
       <Nav />
 
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="relative z-10 page-container pt-24 pb-20">
-          <Image
-            src={home.hero.avatar}
-            alt={home.hero.name}
-            width={72}
-            height={72}
-            className="w-16 h-16 rounded-full object-cover mb-6"
-            priority
-          />
+      <section className="relative overflow-hidden border-t border-black/10">
+        <div className="relative z-10 page-container pt-36 pb-30 text-center">
           <h1 className="font-heading text-4xl font-normal tracking-tight leading-tight sm:text-[60px] mb-6">
             {home.hero.headline.map((line, i) => (
               <span key={i} className="block">
@@ -26,10 +18,10 @@ export default function Home() {
               </span>
             ))}
           </h1>
-          <p className="text-lg text-zinc-500 leading-relaxed mb-10">
+          <p className="text-lg text-zinc-500 leading-relaxed mb-10 whitespace-pre-line">
             {home.hero.subheadline}
           </p>
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-3">
             <Link
               href={home.hero.cta_primary.href}
               className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-700 transition-colors"
@@ -47,12 +39,12 @@ export default function Home() {
       </section>
 
       {/* Outcomes bar */}
-      <section className="border-t border-black/10 py-14">
+      <section className="border-t border-black/10 py-21">
         <div className="page-container">
-          <div className="grid grid-cols-2 gap-y-10 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-black/10">
             {home.outcomes.map((item) => (
-              <div key={item.metric} className="flex flex-col gap-1">
-                <span className="font-heading text-[40px] font-semibold tracking-tight">{item.metric}</span>
+              <div key={item.metric} className="flex flex-col items-center gap-2 text-center sm:px-6">
+                <span className="font-heading text-5xl font-light tracking-tight sm:text-6xl">{item.metric}</span>
                 <span className="text-sm text-zinc-500 leading-snug">{item.label}</span>
               </div>
             ))}
@@ -62,12 +54,10 @@ export default function Home() {
 
       {/* Positioning sections */}
       {home.sections.map((section, i) => (
-        <section key={i} className="border-t border-black/10 py-16">
-          <div className="page-container">
-            <div className="flex flex-col gap-3">
-              <h2 className="font-heading text-2xl font-semibold text-zinc-900">{section.heading}</h2>
-              <p className="text-base text-zinc-600 leading-relaxed">{section.body}</p>
-            </div>
+        <section key={i} className="border-t border-black/10 py-24">
+          <div className="page-container flex flex-col gap-6 sm:flex-row sm:gap-12">
+            <h2 className="font-heading text-2xl font-semibold text-zinc-900 sm:w-1/2">{section.heading}</h2>
+            <p className="text-base text-zinc-600 leading-relaxed sm:w-1/2">{section.body}</p>
           </div>
         </section>
       ))}
@@ -128,9 +118,9 @@ export default function Home() {
       </section>
 
       {/* Testimonial */}
-      <section className="border-t border-black/10 py-16">
+      <section className="border-t border-black/10 py-24">
         <div className="page-container">
-          <figure className="rounded-2xl border border-zinc-100 bg-zinc-50/60 p-8 sm:p-10">
+          <figure className="border border-zinc-100 bg-zinc-50/60 p-8 sm:p-10">
             <blockquote className="text-zinc-600 leading-relaxed">
               &ldquo;{home.testimonial.quote}&rdquo;
             </blockquote>
@@ -154,17 +144,17 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section className="border-t border-black/10 py-20">
-        <div className="page-container flex flex-col gap-5">
-          <h2 className="font-heading text-3xl font-semibold leading-snug">
+      <section className="border-t border-black/10 bg-black/75 py-30">
+        <div className="page-container flex flex-col items-center gap-5 text-center">
+          <h2 className="font-heading text-3xl font-semibold leading-snug text-white whitespace-pre-line">
             {home.contact.heading}
           </h2>
-          <p className="text-base text-zinc-500 leading-relaxed">
+          <p className="text-base text-white/80 leading-relaxed whitespace-pre-line">
             {home.contact.body}
           </p>
           <a
             href={home.contact.cta.href}
-            className="self-start inline-flex items-center justify-center rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-700 transition-colors"
+            className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-sm font-medium text-zinc-900 hover:bg-zinc-200 transition-colors"
           >
             {home.contact.cta.label}
           </a>
