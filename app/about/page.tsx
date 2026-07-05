@@ -5,7 +5,7 @@ import about from "@/content/data/about.json";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen flex flex-col text-zinc-900">
+    <div className="min-h-screen flex flex-col text-zinc-900 bg-[#F3F3E8]">
       <Nav />
 
       {/* Opening */}

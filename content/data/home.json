@@ -30,7 +30,6 @@
       "label": "Design system cut UI execution time"
     }
   ],
-  "coming_soon_label": "Coming soon",
   "sections": [
     {
       "heading": "Data only matters when it guides what people do next.",
@@ -43,44 +42,6 @@
     {
       "heading": "Judgment over tooling.",
       "body": "Being fluent in Claude Code or Copilot in 2026 is like being fluent in Figma in 2020. Picking the right tool matters, but it isn't the skill. The skill is knowing what to build, what to cut, and when something is ready to ship. When I built the Wind ROI Calculator, Figma Make was the right call, and the tool is live and in use today. Now that I'm shipping functional prototypes and production-ready work, my stack is Claude Code, Copilot, and VS Code against a real codebase. Next year it will be something else. The value was never the tool. It's the judgment deciding what it makes."
-    }
-  ],
-  "case_studies": [
-    {
-      "title": "From scattered modules to a platform operators depend on daily",
-      "company": "TWAICE",
-      "tags": "Battery Analytics · B2B SaaS · 3 years",
-      "description": "Three years designing for operators who can't afford to guess",
-      "image": "/cases/twaice/performance-manager-1.jpg",
-      "href": "/projects/twaice",
-      "coming_soon": false
-    },
-    {
-      "title": "The program I built to make myself unnecessary",
-      "company": "ExxonMobil",
-      "tags": "Design Community of Practice · Leadership",
-      "description": "Grew design capability across 100+ people in a global organisation. The program kept running after I left.",
-      "image": "/cases/design-cop/people_EM.jpg",
-      "href": "/projects/design-cop",
-      "coming_soon": false
-    },
-    {
-      "title": "Designing for trust in a market where trust is the product",
-      "company": "ExxonMobil",
-      "tags": "Mobil Mexico · Consumer Loyalty · Mobile",
-      "description": "Research-led design under vendor resistance. Defended a mobile-first direction backed by market data — from discovery through usability validation.",
-      "image": "/cases/mobil-mexico/app-screens.png",
-      "href": "/projects/mobil-mexico",
-      "coming_soon": false
-    },
-    {
-      "title": "Designing operational clarity for the people who run wind farms",
-      "company": "Shoreline Wind",
-      "tags": "Wind Operations · B2B SaaS · Current",
-      "description": "Unifying fragmented legacy workflows into a coherent operational platform. Case study in progress.",
-      "image": "/cases/shoreline/roi-calculator.png",
-      "href": "/projects/shoreline",
-      "coming_soon": true
     }
   ],
   "testimonial": {
