@@ -16,6 +16,14 @@ export default function AboutPage() {
         <p className="text-lg text-zinc-500 max-w-xl leading-relaxed">
           {about.subheadline}
         </p>
+        <a
+          href={about.resume.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-8 inline-flex items-center justify-center rounded-full border border-zinc-300 px-5 py-2.5 text-sm font-medium text-zinc-900 hover:border-zinc-500 transition-colors"
+        >
+          {about.resume.label}
+        </a>
       </section>
 
       {/* Portrait + narrative */}
@@ -41,14 +49,6 @@ export default function AboutPage() {
                 <span key={i} className="block mb-3 last:mb-0">{para}</span>
               ))}
             </p>
-            <a
-              href={about.resume.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 self-start inline-flex items-center justify-center rounded-full border border-zinc-300 px-5 py-2.5 text-sm font-medium text-zinc-900 hover:border-zinc-500 transition-colors"
-            >
-              {about.resume.label}
-            </a>
           </div>
         </div>
       </section>
