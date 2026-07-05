@@ -8,7 +8,7 @@ import cases from "@/content/data/cases.json";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col text-zinc-900 bg-[#F3F3E8]">
+    <div className="min-h-screen flex flex-col text-zinc-900 bg-[#EDF3E8]">
       <Nav />
 
       {/* Hero */}

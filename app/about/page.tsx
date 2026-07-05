@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Nav from "@/components/nav";
 import ThreadIcon from "@/components/thread-icon";
+import SiteFooter from "@/components/site-footer";
 import about from "@/content/data/about.json";
 
 export default function AboutPage() {
@@ -8,26 +9,28 @@ export default function AboutPage() {
     <div className="min-h-screen flex flex-col text-zinc-900 bg-[#F3F3E8]">
       <Nav />
 
-      {/* Opening */}
-      <section className="page-container pt-24 pb-16">
-        <h1 className="font-heading text-5xl font-normal tracking-tight leading-tight sm:text-6xl mb-4">
-          {about.headline}
-        </h1>
-        <p className="text-lg text-zinc-500 leading-relaxed">
-          {about.subheadline}
-        </p>
-        <a
-          href={about.resume.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-8 inline-flex items-center justify-center rounded-full border border-zinc-300 px-5 py-2.5 text-sm font-medium text-zinc-900 hover:border-zinc-500 transition-colors"
-        >
-          {about.resume.label}
-        </a>
+      {/* Hero */}
+      <section className="relative overflow-hidden">
+        <div className="page-container pt-36 pb-30 text-center">
+          <h1 className="font-heading text-4xl font-normal tracking-tight leading-tight sm:text-[60px] mb-6">
+            {about.headline}
+          </h1>
+          <p className="text-lg text-zinc-500 leading-relaxed max-w-2xl mx-auto whitespace-pre-line mb-10">
+            {about.subheadline}
+          </p>
+          <a
+            href={about.resume.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-full border border-zinc-300 px-6 py-3 font-heading text-lg font-normal text-zinc-900 hover:border-zinc-500 transition-colors"
+          >
+            {about.resume.label}
+          </a>
+        </div>
       </section>
 
       {/* Portrait + narrative */}
-      <section className="border-t border-zinc-200 py-16">
+      <section className="border-t border-black/10 py-16">
         <div className="page-container grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-16 items-start">
           <div className="flex flex-col gap-6">
             {about.narrative.map((paragraph, i) => (
@@ -54,12 +57,12 @@ export default function AboutPage() {
       </section>
 
       {/* Career arc */}
-      <section className="border-t border-zinc-200 py-16">
-        <div className="page-container grid grid-cols-1 gap-8 sm:grid-cols-[200px_1fr]">
-          <h2 className="font-heading text-sm font-semibold uppercase tracking-wide text-zinc-400 pt-1">
+      <section className="border-t border-black/10 py-24">
+        <div className="page-container flex flex-col gap-6 sm:flex-row sm:gap-12">
+          <h2 className="font-heading text-2xl font-semibold text-zinc-900 sm:w-1/2">
             {about.career_arc.heading}
           </h2>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 sm:w-1/2">
             {about.career_arc.body.split("\n\n").map((paragraph, i) => (
               <p key={i} className="text-base text-zinc-600 leading-relaxed">
                 {paragraph}
@@ -69,78 +72,50 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Three threads */}
-      <section className="border-t border-zinc-200 py-16">
-        <div className="page-container">
-          <h2 className="font-heading text-sm font-semibold uppercase tracking-wide text-zinc-400 mb-10">
-            Three threads
-          </h2>
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
-            {about.threads.map((thread) => (
-              <div key={thread.heading} className="flex flex-col gap-3">
-                <ThreadIcon name={thread.icon} className="text-zinc-800" />
-                <h3 className="font-heading text-lg font-semibold text-zinc-900">
-                  {thread.heading}
-                </h3>
-                <p className="text-sm text-zinc-500 leading-relaxed">
-                  {thread.body}
-                </p>
-              </div>
-            ))}
+      {/* Threads */}
+      {about.threads.map((thread) => (
+        <section key={thread.heading} className="border-t border-black/10 py-24">
+          <div className="page-container flex flex-col gap-6 sm:flex-row sm:gap-12">
+            <h2 className="font-heading text-2xl font-semibold text-zinc-900 sm:w-1/2 flex items-center gap-3">
+              <ThreadIcon name={thread.icon} className="shrink-0 text-zinc-900" />
+              {thread.heading}
+            </h2>
+            <p className="text-base text-zinc-600 leading-relaxed sm:w-1/2">
+              {thread.body}
+            </p>
           </div>
+        </section>
+      ))}
+
+      {/* Testimonial */}
+      <section className="border-t border-black/10 py-24">
+        <div className="page-container">
+          {about.testimonials.map((t) => (
+            <figure key={t.name} className="border border-zinc-100 bg-zinc-50/60 p-8 sm:p-10">
+              <blockquote className="text-2xl font-light leading-[1.4] text-zinc-600">
+                &ldquo;{t.quote}&rdquo;
+              </blockquote>
+              <figcaption className="mt-6 flex items-center gap-3">
+                {t.image && (
+                  <Image
+                    src={t.image}
+                    alt={t.name}
+                    width={56}
+                    height={56}
+                    className="w-11 h-11 rounded-full object-cover shrink-0"
+                  />
+                )}
+                <span className="text-sm text-zinc-400">
+                  <span className="block font-medium text-zinc-700">{t.name}</span>
+                  <span className="block">{t.title}</span>
+                </span>
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="border-t border-zinc-200 py-16">
-        <div className="page-container">
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
-            {about.testimonials.map((t) => (
-              <figure
-                key={t.name}
-                className="rounded-2xl border border-zinc-100 bg-zinc-50/60 p-8 sm:p-10"
-              >
-                <blockquote className="text-zinc-600 leading-relaxed">
-                  &ldquo;{t.quote}&rdquo;
-                </blockquote>
-                <figcaption className="mt-6 flex items-center gap-3">
-                  {t.image && (
-                    <Image
-                      src={t.image}
-                      alt={t.name}
-                      width={56}
-                      height={56}
-                      className="w-11 h-11 rounded-full object-cover shrink-0"
-                    />
-                  )}
-                  <span className="text-sm text-zinc-400">
-                    <span className="block font-medium text-zinc-700">{t.name}</span>
-                    <span className="block">{t.title}</span>
-                  </span>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="border-t border-zinc-200 py-20">
-        <div className="page-container flex flex-col gap-5">
-          <h2 className="font-heading text-3xl font-semibold leading-snug">
-            {about.contact.heading}
-          </h2>
-          <p className="text-base text-zinc-500 leading-relaxed">
-            {about.contact.body}
-          </p>
-          <a
-            href={about.contact.cta.href}
-            className="self-start inline-flex items-center justify-center rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-700 transition-colors"
-          >
-            {about.contact.cta.label}
-          </a>
-        </div>
-      </section>
+      <SiteFooter />
     </div>
   );
 }

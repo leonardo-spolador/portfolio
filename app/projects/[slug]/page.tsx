@@ -84,7 +84,7 @@ export default async function CaseStudyPage({
   const { frontmatter, content } = caseData;
 
   return (
-    <div className="min-h-screen flex flex-col text-zinc-900 bg-[#F3F3E8]">
+    <div className="min-h-screen flex flex-col text-zinc-900 bg-white">
       <Nav />
 
       {/* Header */}
