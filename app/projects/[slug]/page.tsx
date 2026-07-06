@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Nav from "@/components/nav";
+import { Tabs, Tab } from "@/components/case-tabs";
 import Slideshow from "@/components/slideshow";
 import PeopleGrid from "@/components/people-grid";
 import { getCaseBySlug, getAllCases } from "@/lib/mdx";
@@ -66,6 +67,47 @@ function Quote({
   );
 }
 
+function TabCols({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="grid grid-cols-1 items-start gap-10 lg:grid-flow-col lg:auto-cols-fr lg:gap-16">
+      {children}
+    </div>
+  );
+}
+
+function CardQuote({
+  children,
+  name,
+  role,
+  image,
+}: {
+  children: React.ReactNode;
+  name: string;
+  role?: string;
+  image?: string;
+}) {
+  return (
+    <figure className="bg-white p-9 [&_p]:!text-lg [&_p]:!text-zinc-600 [&_p]:!leading-relaxed">
+      <blockquote>{children}</blockquote>
+      <figcaption className="mt-6 flex items-center gap-3">
+        {image && (
+          <Image
+            src={image}
+            alt={name}
+            width={56}
+            height={56}
+            className="w-11 h-11 rounded-full object-cover shrink-0"
+          />
+        )}
+        <span className="text-sm text-zinc-400">
+          <span className="block font-medium text-zinc-700">{name}</span>
+          {role ? <span className="block">{role}</span> : null}
+        </span>
+      </figcaption>
+    </figure>
+  );
+}
+
 function Columns({ children }: { children: React.ReactNode }) {
   const items = Children.toArray(children).filter(
     (c) => typeof c !== "string" || c.trim() !== ""
@@ -79,7 +121,7 @@ function Columns({ children }: { children: React.ReactNode }) {
   );
 }
 
-const components = { Mockup, Quote, Slideshow, PeopleGrid, Columns };
+const components = { Mockup, Quote, Slideshow, PeopleGrid, Columns, Tabs, Tab, TabCols, CardQuote };
 
 export default async function CaseStudyPage({
   params,
