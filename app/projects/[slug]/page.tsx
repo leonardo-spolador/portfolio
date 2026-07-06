@@ -5,6 +5,8 @@ import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Nav from "@/components/nav";
 import { Tabs, Tab } from "@/components/case-tabs";
+import Accordion from "@/components/case-accordion";
+import Carousel from "@/components/carousel";
 import Slideshow from "@/components/slideshow";
 import PeopleGrid from "@/components/people-grid";
 import { getCaseBySlug, getAllCases } from "@/lib/mdx";
@@ -80,14 +82,18 @@ function CardQuote({
   name,
   role,
   image,
+  tone = "white",
 }: {
   children: React.ReactNode;
   name: string;
   role?: string;
   image?: string;
+  tone?: "white" | "sand";
 }) {
   return (
-    <figure className="bg-white p-9 [&_p]:!text-lg [&_p]:!text-zinc-600 [&_p]:!leading-relaxed">
+    <figure
+      className={`${tone === "sand" ? "bg-[#F3F3E8]" : "bg-white"} p-9 [&_p]:!text-lg [&_p]:!text-zinc-600 [&_p]:!leading-relaxed`}
+    >
       <blockquote>{children}</blockquote>
       <figcaption className="mt-6 flex items-center gap-3">
         {image && (
@@ -125,7 +131,7 @@ function Columns({ children }: { children: React.ReactNode }) {
   );
 }
 
-const components = { Mockup, Quote, Slideshow, PeopleGrid, Columns, Tabs, Tab, TabCols, CardQuote };
+const components = { Mockup, Quote, Slideshow, PeopleGrid, Columns, Tabs, Tab, TabCols, CardQuote, Accordion, Carousel };
 
 export default async function CaseStudyPage({
   params,
