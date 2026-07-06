@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { Children } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
@@ -65,7 +66,20 @@ function Quote({
   );
 }
 
-const components = { Mockup, Quote, Slideshow, PeopleGrid };
+function Columns({ children }: { children: React.ReactNode }) {
+  const items = Children.toArray(children).filter(
+    (c) => typeof c !== "string" || c.trim() !== ""
+  );
+  return (
+    <div className="not-prose grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1px_1fr] lg:gap-0 lg:gap-x-12 [&_h2]:font-heading [&_h2]:text-4xl [&_h2]:font-normal [&_h2]:tracking-tight [&_h2]:mb-8 [&_p]:text-zinc-600 [&_p]:leading-relaxed [&_p+p]:mt-5">
+      {items[0]}
+      <div className="hidden lg:block bg-black/10" aria-hidden="true" />
+      {items[1]}
+    </div>
+  );
+}
+
+const components = { Mockup, Quote, Slideshow, PeopleGrid, Columns };
 
 export default async function CaseStudyPage({
   params,
