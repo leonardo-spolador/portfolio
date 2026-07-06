@@ -113,10 +113,14 @@ function Columns({ children }: { children: React.ReactNode }) {
     (c) => typeof c !== "string" || c.trim() !== ""
   );
   return (
-    <div className="not-prose -mt-16 grid grid-cols-1 border-b border-black/10 lg:grid-cols-[1fr_1px_1fr] [&_h2]:font-heading [&_h2]:text-4xl [&_h2]:font-normal [&_h2]:tracking-tight [&_h2]:mb-8 [&_p]:text-zinc-600 [&_p]:leading-relaxed [&_p+p]:mt-5">
+    <div className="not-prose relative -mt-16 grid grid-cols-1 lg:grid-cols-[1fr_1px_1fr] [&_h2]:font-heading [&_h2]:text-4xl [&_h2]:font-normal [&_h2]:tracking-tight [&_h2]:mb-8 [&_p]:text-zinc-600 [&_p]:leading-relaxed [&_p+p]:mt-5">
       <div className="py-21 lg:pr-21">{items[0]}</div>
       <div className="hidden lg:block bg-black/10" aria-hidden="true" />
       <div className="py-21 lg:pl-21">{items[1]}</div>
+      <div
+        className="absolute bottom-0 left-1/2 h-px w-screen -translate-x-1/2 bg-black/10"
+        aria-hidden="true"
+      />
     </div>
   );
 }
@@ -142,7 +146,7 @@ export default async function CaseStudyPage({
   const card = cases.items.find((c) => c.href === `/projects/${slug}`);
 
   return (
-    <div className="min-h-screen flex flex-col text-zinc-900 bg-white">
+    <div className="min-h-screen flex flex-col text-zinc-900 bg-white overflow-x-clip">
       <Nav />
 
       {/* Header */}
@@ -215,7 +219,7 @@ export default async function CaseStudyPage({
             prose-blockquote:border-l-2 prose-blockquote:border-zinc-100
             prose-blockquote:pl-4 prose-blockquote:text-zinc-500 prose-blockquote:not-italic
             prose-strong:text-zinc-900 prose-strong:font-semibold
-            prose-hr:border-black/10
+            prose-hr:border-black/10 prose-hr:relative prose-hr:left-1/2 prose-hr:w-screen prose-hr:-translate-x-1/2
             max-w-none">
             <MDXRemote source={content} components={components} />
           </div>

@@ -19,7 +19,7 @@ export function Tabs({ title, children }: { title?: string; children: ReactNode 
   const [active, setActive] = useState(0);
 
   return (
-    <section className="not-prose my-16">
+    <section className="not-prose my-21">
       {title && (
         <h2 className="font-heading text-4xl font-normal tracking-tight mb-12">{title}</h2>
       )}
