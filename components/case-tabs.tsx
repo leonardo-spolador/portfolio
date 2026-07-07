@@ -21,7 +21,7 @@ export function Tabs({ title, children }: { title?: string; children: ReactNode 
   return (
     <section className="not-prose my-21">
       {title && (
-        <h2 className="font-heading text-4xl font-normal tracking-tight mb-12">{title}</h2>
+        <h2 className="font-heading text-4xl font-normal tracking-tight mb-16">{title}</h2>
       )}
       <div role="tablist" className="flex">
         {tabs.map((tab, i) => (

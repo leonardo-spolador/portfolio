@@ -158,7 +158,7 @@ function Columns({ children }: { children: React.ReactNode }) {
     (c) => typeof c !== "string" || c.trim() !== ""
   );
   return (
-    <div className="not-prose relative -mt-16 grid grid-cols-1 lg:grid-cols-[1fr_1px_1fr] [&_h2]:font-heading [&_h2]:text-4xl [&_h2]:font-normal [&_h2]:tracking-tight [&_h2]:mb-8 [&_p]:text-zinc-600 [&_p]:leading-relaxed [&_p+p]:mt-5">
+    <div className="not-prose relative -mt-16 grid grid-cols-1 lg:grid-cols-[1fr_1px_1fr] [&_h2]:font-heading [&_h2]:text-4xl [&_h2]:font-normal [&_h2]:tracking-tight [&_h2]:mb-16 [&_p]:text-zinc-600 [&_p]:leading-relaxed [&_p+p]:mt-5">
       <div className="py-21 lg:pr-21">{items[0]}</div>
       <div className="hidden lg:block bg-black/10" aria-hidden="true" />
       <div className="py-21 lg:pl-21">{items[1]}</div>
