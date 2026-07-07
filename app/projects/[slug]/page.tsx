@@ -200,7 +200,7 @@ export default async function CaseStudyPage({
           <span className="text-xs font-medium text-zinc-400 uppercase tracking-wide">
             {frontmatter.company}
           </span>
-          <h1 className="font-heading text-4xl font-semibold tracking-tight leading-tight sm:text-[60px] mt-4 mb-4">
+          <h1 className="font-heading text-4xl font-normal tracking-tight leading-tight sm:text-[60px] mt-4 mb-4">
             {frontmatter.title}
           </h1>
           <p className="text-lg text-zinc-500 leading-relaxed max-w-2xl mx-auto mb-12">
