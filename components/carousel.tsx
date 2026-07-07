@@ -8,9 +8,11 @@ type Slide = { src: string; alt: string };
 export default function Carousel({
   slides,
   interval = 6000,
+  showCaption = true,
 }: {
   slides: Slide[];
   interval?: number;
+  showCaption?: boolean;
 }) {
   const [idx, setIdx] = useState(0);
   const [reduced, setReduced] = useState(false);
@@ -68,9 +70,11 @@ export default function Carousel({
           className="object-contain"
         />
       </div>
-      <figcaption className="mt-3 text-center text-xs text-zinc-400">
-        {current.alt}
-      </figcaption>
+      {showCaption && (
+        <figcaption className="mt-3 text-center text-xs text-zinc-400">
+          {current.alt}
+        </figcaption>
+      )}
     </figure>
   );
 }
