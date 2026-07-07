@@ -177,7 +177,7 @@ function LeadSection({
           </p>
         )}
       </div>
-      <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-flow-col lg:auto-cols-fr lg:gap-0 lg:divide-x lg:divide-black/10 lg:[&>*]:px-8 lg:[&>*:first-child]:pl-0 lg:[&>*:last-child]:pr-0">
+      <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-flow-col lg:auto-cols-fr lg:gap-0 lg:divide-x lg:divide-black/10 lg:[&>*]:px-16 lg:[&>*:first-child]:pl-0 lg:[&>*:last-child]:pr-0">
         {children}
       </div>
       <div
