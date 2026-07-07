@@ -15,19 +15,23 @@ export default function Carousel({
   const [idx, setIdx] = useState(0);
   const [reduced, setReduced] = useState(false);
 
+  const total = slides?.length ?? 0;
+
   useEffect(() => {
     setReduced(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   }, []);
 
   useEffect(() => {
-    if (reduced) return;
-    const t = setTimeout(() => setIdx((i) => (i + 1) % slides.length), interval);
+    if (reduced || total < 2) return;
+    const t = setTimeout(() => setIdx((i) => (i + 1) % total), interval);
     return () => clearTimeout(t);
-  }, [idx, reduced, interval, slides.length]);
+  }, [idx, reduced, interval, total]);
+
+  if (total === 0) return null;
+  const current = slides[Math.min(idx, total - 1)];
 
   return (
     <figure>
-      <style>{`@keyframes carousel-progress { from { width: 0% } to { width: 100% } }`}</style>
       {/* Progress bars: paginator + progress */}
       <div className="mb-4 flex gap-2">
         {slides.map((slide, i) => (
@@ -35,7 +39,7 @@ export default function Carousel({
             key={slide.src}
             type="button"
             onClick={() => setIdx(i)}
-            aria-label={`Go to slide ${i + 1} of ${slides.length}`}
+            aria-label={`Go to slide ${i + 1} of ${total}`}
             aria-current={i === idx}
             className="h-1 flex-1 cursor-pointer overflow-hidden bg-black/10"
           >
@@ -56,16 +60,16 @@ export default function Carousel({
       </div>
       <div className="relative aspect-[16/10] overflow-hidden rounded-lg border border-zinc-100 bg-zinc-50">
         <Image
-          key={slides[idx].src}
-          src={slides[idx].src}
-          alt={slides[idx].alt}
+          key={current.src}
+          src={current.src}
+          alt={current.alt}
           fill
           sizes="(max-width: 1024px) 100vw, 1400px"
           className="object-contain"
         />
       </div>
       <figcaption className="mt-3 text-center text-xs text-zinc-400">
-        {slides[idx].alt}
+        {current.alt}
       </figcaption>
     </figure>
   );

@@ -1,6 +1,8 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { useEffect, useId, useState, type ReactNode } from "react";
+
+const OPEN_EVENT = "case-accordion:open";
 
 export default function Accordion({
   chapter,
@@ -13,7 +15,23 @@ export default function Accordion({
   subtitle?: string;
   children: ReactNode;
 }) {
+  const id = useId();
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const onOpen = (e: Event) => {
+      if ((e as CustomEvent<string>).detail !== id) setOpen(false);
+    };
+    window.addEventListener(OPEN_EVENT, onOpen);
+    return () => window.removeEventListener(OPEN_EVENT, onOpen);
+  }, [id]);
+
+  const toggle = () => {
+    if (!open) {
+      window.dispatchEvent(new CustomEvent<string>(OPEN_EVENT, { detail: id }));
+    }
+    setOpen(!open);
+  };
 
   return (
     <section className="not-prose relative py-21">
@@ -24,22 +42,22 @@ export default function Accordion({
       <button
         type="button"
         aria-expanded={open}
-        onClick={() => setOpen((o) => !o)}
+        onClick={toggle}
         className="flex w-full cursor-pointer items-start justify-between gap-8 text-left"
       >
-        <div className="flex flex-col gap-3">
+        <span className="flex flex-col gap-3">
           <span className="font-heading text-[22px] font-normal leading-[1.4] text-zinc-900">
             CHAPTER {chapter}
           </span>
-          <h2 className="font-heading text-[40px] font-normal leading-[1.4] tracking-tight text-zinc-900">
+          <span className="font-heading text-[40px] font-normal leading-[1.4] tracking-tight text-zinc-900">
             {title}
-          </h2>
+          </span>
           {subtitle && (
-            <p className="font-heading text-[22px] font-normal leading-[1.4] text-zinc-900 whitespace-pre-line">
+            <span className="font-heading text-[22px] font-normal leading-[1.4] text-zinc-900 whitespace-pre-line">
               {subtitle}
-            </p>
+            </span>
           )}
-        </div>
+        </span>
         <svg
           width="28"
           height="28"
