@@ -153,6 +153,41 @@ function DividedCols({ children }: { children: React.ReactNode }) {
   );
 }
 
+// First section of a case: aligns its top with the article's top line
+// (-mt-16), metrics-matched vertical padding, a 40px title, 64px gap to a
+// divided-column body, and a full-bleed bottom divider.
+function LeadSection({
+  title,
+  subtitle,
+  children,
+}: {
+  title: string;
+  subtitle?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <section className="not-prose relative -mt-16 py-21 [&_p]:text-base [&_p]:text-zinc-600 [&_p]:leading-relaxed [&_p+p]:mt-5 [&_strong]:font-semibold [&_strong]:text-zinc-900">
+      <div className="flex flex-col gap-3">
+        <h2 className="font-heading text-[40px] font-normal leading-[1.4] tracking-tight text-zinc-900">
+          {title}
+        </h2>
+        {subtitle && (
+          <p className="font-heading text-[22px] font-normal leading-[1.4] text-zinc-900 whitespace-pre-line">
+            {subtitle}
+          </p>
+        )}
+      </div>
+      <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-flow-col lg:auto-cols-fr lg:gap-0 lg:divide-x lg:divide-black/10 lg:[&>*]:px-8 lg:[&>*:first-child]:pl-0 lg:[&>*:last-child]:pr-0">
+        {children}
+      </div>
+      <div
+        className="absolute bottom-0 left-1/2 h-px w-screen -translate-x-1/2 bg-black/10"
+        aria-hidden="true"
+      />
+    </section>
+  );
+}
+
 function Columns({ children }: { children: React.ReactNode }) {
   const items = Children.toArray(children).filter(
     (c) => typeof c !== "string" || c.trim() !== ""
@@ -170,7 +205,7 @@ function Columns({ children }: { children: React.ReactNode }) {
   );
 }
 
-const components = { Mockup, Quote, Slideshow, PeopleGrid, Columns, Tabs, Tab, TabCols, CardQuote, Accordion, Carousel, ChapterBlock, DividedCols };
+const components = { Mockup, Quote, Slideshow, PeopleGrid, Columns, Tabs, Tab, TabCols, CardQuote, Accordion, Carousel, ChapterBlock, DividedCols, LeadSection };
 
 export default async function CaseStudyPage({
   params,
