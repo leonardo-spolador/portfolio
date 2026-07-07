@@ -147,7 +147,7 @@ function ChapterBlock({
 
 function DividedCols({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mt-10 mb-16 grid grid-cols-1 gap-10 lg:grid-flow-col lg:auto-cols-fr lg:gap-0 lg:divide-x lg:divide-black/10 lg:[&>*]:px-8 lg:[&>*:first-child]:pl-0 lg:[&>*:last-child]:pr-0">
+    <div className="mt-15 mb-24 grid grid-cols-1 gap-10 lg:grid-flow-col lg:auto-cols-fr lg:gap-0 lg:divide-x lg:divide-black/10 lg:[&>*]:px-8 lg:[&>*:first-child]:pl-0 lg:[&>*:last-child]:pr-0">
       {children}
     </div>
   );

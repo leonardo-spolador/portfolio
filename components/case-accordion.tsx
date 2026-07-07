@@ -1,9 +1,7 @@
 "use client";
 
-import { useEffect, useId, useState, type ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { chapterContentClass } from "@/lib/case-styles";
-
-const OPEN_EVENT = "case-accordion:open";
 
 export default function Accordion({
   chapter,
@@ -16,23 +14,9 @@ export default function Accordion({
   subtitle?: string;
   children: ReactNode;
 }) {
-  const id = useId();
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    const onOpen = (e: Event) => {
-      if ((e as CustomEvent<string>).detail !== id) setOpen(false);
-    };
-    window.addEventListener(OPEN_EVENT, onOpen);
-    return () => window.removeEventListener(OPEN_EVENT, onOpen);
-  }, [id]);
-
-  const toggle = () => {
-    if (!open) {
-      window.dispatchEvent(new CustomEvent<string>(OPEN_EVENT, { detail: id }));
-    }
-    setOpen(!open);
-  };
+  const toggle = () => setOpen((o) => !o);
 
   return (
     <section className="not-prose relative py-21">
