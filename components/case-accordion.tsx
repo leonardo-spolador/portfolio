@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useState, type ReactNode } from "react";
+import { chapterContentClass } from "@/lib/case-styles";
 
 const OPEN_EVENT = "case-accordion:open";
 
@@ -75,11 +76,7 @@ export default function Accordion({
           <polyline points="6 9 12 15 18 9" />
         </svg>
       </button>
-      {open && (
-        <div className="mt-16 [&_p]:text-base [&_p]:text-zinc-600 [&_p]:leading-relaxed [&_p+p]:mt-5 [&_strong]:font-semibold [&_strong]:text-zinc-900 [&_h3]:font-heading [&_h3]:text-[28px] [&_h3]:font-normal [&_h3]:leading-[1.4] [&_h3]:text-zinc-900 [&_h4]:font-heading [&_h4]:text-[22px] [&_h4]:font-normal [&_h4]:leading-[1.4] [&_h4]:text-zinc-900 [&_h4]:mt-2 [&_h4+p]:mt-6 [&_p+figure]:mt-8 [&_figure+figure]:mt-8 [&>figure:first-child]:mt-0 [&>figure:first-child]:mb-16">
-          {children}
-        </div>
-      )}
+      {open && <div className={chapterContentClass}>{children}</div>}
     </section>
   );
 }

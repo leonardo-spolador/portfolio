@@ -10,6 +10,7 @@ import Carousel from "@/components/carousel";
 import Slideshow from "@/components/slideshow";
 import PeopleGrid from "@/components/people-grid";
 import { getCaseBySlug, getAllCases } from "@/lib/mdx";
+import { chapterContentClass } from "@/lib/case-styles";
 import cases from "@/content/data/cases.json";
 
 export const dynamicParams = false;
@@ -114,6 +115,44 @@ function CardQuote({
   );
 }
 
+function ChapterBlock({
+  title,
+  subtitle,
+  children,
+}: {
+  title: string;
+  subtitle?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <section className="not-prose relative py-21">
+      <div
+        className="absolute top-0 left-1/2 h-px w-screen -translate-x-1/2 bg-black/10"
+        aria-hidden="true"
+      />
+      <div className="flex flex-col gap-3">
+        <h2 className="font-heading text-[40px] font-normal leading-[1.4] tracking-tight text-zinc-900">
+          {title}
+        </h2>
+        {subtitle && (
+          <p className="font-heading text-[22px] font-normal leading-[1.4] text-zinc-900 whitespace-pre-line">
+            {subtitle}
+          </p>
+        )}
+      </div>
+      <div className={chapterContentClass}>{children}</div>
+    </section>
+  );
+}
+
+function DividedCols({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="mt-10 mb-16 grid grid-cols-1 gap-10 lg:grid-flow-col lg:auto-cols-fr lg:gap-0 lg:divide-x lg:divide-black/10 lg:[&>*]:px-8 lg:[&>*:first-child]:pl-0 lg:[&>*:last-child]:pr-0">
+      {children}
+    </div>
+  );
+}
+
 function Columns({ children }: { children: React.ReactNode }) {
   const items = Children.toArray(children).filter(
     (c) => typeof c !== "string" || c.trim() !== ""
@@ -131,7 +170,7 @@ function Columns({ children }: { children: React.ReactNode }) {
   );
 }
 
-const components = { Mockup, Quote, Slideshow, PeopleGrid, Columns, Tabs, Tab, TabCols, CardQuote, Accordion, Carousel };
+const components = { Mockup, Quote, Slideshow, PeopleGrid, Columns, Tabs, Tab, TabCols, CardQuote, Accordion, Carousel, ChapterBlock, DividedCols };
 
 export default async function CaseStudyPage({
   params,
