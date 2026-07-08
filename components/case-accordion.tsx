@@ -5,11 +5,13 @@ import { chapterContentClass } from "@/lib/case-styles";
 
 export default function Accordion({
   chapter,
+  eyebrow,
   title,
   subtitle,
   children,
 }: {
-  chapter: string | number;
+  chapter?: string | number;
+  eyebrow?: string;
   title: string;
   subtitle?: string;
   children: ReactNode;
@@ -32,7 +34,7 @@ export default function Accordion({
       >
         <span className="flex flex-col gap-3">
           <span className="font-heading text-[22px] font-normal leading-[1.4] text-zinc-900">
-            CHAPTER {chapter}
+            {eyebrow ?? `CHAPTER ${chapter}`}
           </span>
           <span className="font-heading text-[40px] font-normal leading-[1.4] tracking-tight text-zinc-900">
             {title}

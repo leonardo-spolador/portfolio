@@ -140,43 +140,95 @@ ExxonMobil's own internal strategy document positioned the mobile platform as th
 
 </ChapterBlock>
 
----
+<Accordion eyebrow="The Design Process" title="1. Hypothesis formation">
 
-## The Design Process
-
-I structured the work in iterative cycles, each moving from hypothesis through exploration to validation.
-
-**Hypothesis formation.** I formed explicit design hypotheses connecting user needs to business outcomes, using a lean hypothesis format to make assumptions visible and testable. The central framing: we believe increased engagement will be achieved if users can trust the service, and we will know we're right when we see trust-related signals correlate with new user acquisition.
+I formed explicit design hypotheses connecting user needs to business outcomes, using a lean hypothesis format to make assumptions visible and testable. The central framing: we believe increased engagement will be achieved if users can trust the service, and we will know we're right when we see trust-related signals correlate with new user acquisition.
 
 <Mockup src="/cases/mobil-mexico/strategy.jpg" alt="Strategy — how might we achieve this? Mapping assumed needs to business impact" />
 
-**Exploration.** I conducted exploratory interviews with 7 participants, mapping behaviors across three moments — driving, refueling, and at the station. I ran a Kano analysis with 24 participants across 11 planned features to understand perceived value, distinguishing must-haves from attractive-but-optional features.
+</Accordion>
 
-Key finding from the Kano analysis: most planned features scored as "attractive" — satisfaction generators — but only one scored as a true "must-be": a tangible, easy-to-understand points balance. Without that foundation, engagement would fail regardless of how many features were added. Physical loyalty cards scored as actively undesirable and risked outright rejection.
+<Accordion eyebrow="The Design Process" title="2. Exploration">
 
-<Mockup src="/cases/mobil-mexico/generative-research.jpg" alt="Generative research — perception of value findings from the Kano analysis" />
+<TabCols>
+<div>
 
-<Mockup src="/cases/mobil-mexico/journey-moments.jpg" alt="User journey map — driving, refueling, and at-station moments" />
+#### Design
 
-**Design.** I mapped the user journey end-to-end, designed the information architecture, and produced four UI studies that resolved into a testable prototype. Design decisions were grounded in the research: guest access before login (reducing friction for first-time users), station-level detail in the finder, digital invoice management as a high-value differentiator, and a security model that didn't introduce unnecessary friction at the point of earning points.
+I mapped the user journey end-to-end, designed the information architecture, and produced four UI studies that resolved into a testable prototype.
 
-**Validation.** I ran usability testing with 7 participants across core flows — onboarding, station finder, points exchange, additional offers, digital invoices, and PIN management. The SUS score came back at 77, above the industry average of 68.
+Design decisions were grounded in the research: guest access before login (reducing friction for first-time users), station-level detail in the finder, digital invoice management as a high-value differentiator, and a security model that didn't introduce unnecessary friction at the point of earning points.
 
-The 38 documented findings were categorized by type and severity: 16 about the station finder, 8 about onboarding, and critical concerns about the perceived value of the economic model. The most important insight: users couldn't intuitively translate points into real-world value. "50 points" meant nothing without a clear conversion to something tangible. This became the primary recommendation for Cycle 2.
+</div>
+<div>
 
-**COVID adaptation.** Mid-project, face-to-face research became impossible. I adapted by recommending remote testing approaches and used ExxonMobil's internal Mexican employee base for validation participants — a practical compromise that kept the research moving without losing the cultural specificity the project required.
+#### Validation
 
----
+I ran usability testing with 7 participants across core flows — onboarding, station finder, points exchange, additional offers, digital invoices, and PIN management.
 
-## Holding Ground with the Vendor
+The SUS score came back at 77, above the industry average of 68.
+
+</div>
+<div>
+
+#### Findings
+
+The 38 documented findings were categorized by type and severity: 16 about the station finder, 8 about onboarding, and critical concerns about the perceived value of the economic model.
+
+The most important insight: users couldn't intuitively translate points into real-world value. "50 points" meant nothing without a clear conversion to something tangible.
+
+**This became the primary recommendation for Cycle 2.**
+
+</div>
+<div>
+
+#### COVID adaptation
+
+Mid-project, face-to-face research became impossible.
+
+I adapted by recommending remote testing approaches and used ExxonMobil's internal Mexican employee base for validation participants — a practical compromise that kept the research moving without losing the cultural specificity the project required.
+
+</div>
+</TabCols>
+
+<Carousel srcs="/cases/mobil-mexico/generative-research.jpg,/cases/mobil-mexico/journey-moments.jpg" alts="Generative research — perception of value findings from the Kano analysis||User journey map — driving, refueling, and at-station moments" />
+
+</Accordion>
+
+<Accordion eyebrow="The Design Process" title="3. Holding ground with the vendor">
 
 Two lines I held consistently throughout the project.
 
-The first was **success criteria for each development slice.** Before any slice moved to development, I required verifiable confirmation that the agreed use cases were covered — not just technically built, but functional in the way the strategy defined. EY Mexico called their process agile. In practice, minimum criteria weren't consistently met before moving forward. Holding this line slowed some conversations. It also prevented shortcuts that would have required costly rework later.
+<div className="mt-12">
+<TabCols>
+<div>
 
-The second was **mobile experience quality.** The vendor's defaults reflected desktop thinking — interaction patterns, information density, navigation logic. I maintained the mobile-first direction through design specifications, prototype testing, and direct challenge in review sessions. The research gave me the evidence: this was an Android-dominant, mid-range-hardware market where a desktop-adapted experience would create friction at every touchpoint.
+#### Success criteria for each development slice
+
+Before any slice moved to development, I required verifiable confirmation that the agreed use cases were covered — not just technically built, but functional in the way the strategy defined.
+
+EY Mexico called their process agile. In practice, minimum criteria weren't consistently met before moving forward.
+
+Holding this line slowed some conversations. It also prevented shortcuts that would have required costly rework later.
+
+</div>
+<div>
+
+#### Mobile experience quality
+
+The vendor's defaults reflected desktop thinking — interaction patterns, information density, navigation logic.
+
+I maintained the mobile-first direction through design specifications, prototype testing, and direct challenge in review sessions.
+
+The research gave me the evidence: this was an Android-dominant, mid-range-hardware market where a desktop-adapted experience would create friction at every touchpoint.
+
+</div>
+</TabCols>
+</div>
 
 <Mockup src="/cases/mobil-mexico/ui-flows.jpg" alt="Mobile-first UI studies — station finder and onboarding flows" />
+
+</Accordion>
 
 <ChapterBlock title="What I left with">
 

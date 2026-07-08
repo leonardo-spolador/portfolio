@@ -62,7 +62,7 @@ export default function Carousel({
   const current = resolved[Math.min(idx, total - 1)];
 
   return (
-    <figure>
+    <figure className="my-10">
       {/* Progress bars (paginator) + prev/next arrows */}
       <div className="mb-4 flex items-center gap-3">
         <div className="flex flex-1 gap-2">
