@@ -91,11 +91,11 @@ export default function Carousel({
       </div>
       <div className="relative aspect-[16/10] overflow-hidden rounded-lg border border-zinc-100 bg-zinc-50">
         <Image
-          key={current.src}
           src={current.src}
           alt={current.alt}
           width={1600}
           height={1000}
+          priority
           sizes="(max-width: 1024px) 100vw, 1400px"
           className="absolute inset-0 h-full w-full object-contain"
         />
