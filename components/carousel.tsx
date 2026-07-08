@@ -65,9 +65,10 @@ export default function Carousel({
           key={current.src}
           src={current.src}
           alt={current.alt}
-          fill
+          width={1600}
+          height={1000}
           sizes="(max-width: 1024px) 100vw, 1400px"
-          className="object-contain"
+          className="absolute inset-0 h-full w-full object-contain"
         />
       </div>
       {showCaption && (
