@@ -2,7 +2,7 @@ import home from "@/content/data/home.json";
 
 export default function SiteFooter() {
   return (
-    <section className="border-t border-black/10 bg-black/75 py-30">
+    <section className="border-t border-black/10 bg-[#30403B] py-30">
       <div className="page-container flex flex-col items-center gap-5 text-center">
         <h2 className="font-heading text-3xl font-semibold leading-snug text-white whitespace-pre-line">
           {home.contact.heading}

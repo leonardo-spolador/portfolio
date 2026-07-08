@@ -379,7 +379,7 @@ export default async function CaseStudyPage({
       </article>
 
       {/* Footer CTA */}
-      <section className="border-t border-black/10 bg-black/75 py-30">
+      <section className="border-t border-black/10 bg-[#30403B] py-30">
         <div className="page-container flex flex-col items-center gap-6 text-center">
           <h2 className="font-heading text-3xl font-semibold leading-snug text-white">
             Looking at a similar challenge?
