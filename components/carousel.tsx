@@ -5,34 +5,46 @@ import Image from "next/image";
 
 type Slide = { src: string; alt: string };
 
+// NOTE: All props are plain strings. In this MDX->RSC setup, only literal
+// string attributes reach client components; any {expression} attribute is
+// dropped when crossing the server->client boundary. So slides are passed
+// as delimited strings (srcs comma-separated, alts "||"-separated) or as a
+// base+count sequence, and parsed here on the client.
 export default function Carousel({
-  slides,
+  srcs,
+  alts,
   base,
   count,
   alt = "Slide",
-  interval = 6000,
-  showCaption = true,
+  caption,
+  interval = "6000",
 }: {
-  slides?: Slide[];
+  srcs?: string;
+  alts?: string;
   base?: string;
-  count?: number | string;
+  count?: string | number;
   alt?: string;
-  interval?: number;
-  showCaption?: boolean;
+  caption?: string;
+  interval?: string | number;
 }) {
-  // Build the slide list from either an explicit array or a base+count
-  // sequence. Generating here (client-side) keeps MDX props simple and
-  // serializable across the server→client boundary.
-  const resolved: Slide[] =
-    slides ??
-    (base
-      ? Array.from({ length: Number(count) || 0 }, (_, i) => ({
+  const n = Number(count) || 0;
+  const altList = alts ? alts.split("||").map((a) => a.trim()) : [];
+  const resolved: Slide[] = srcs
+    ? srcs
+        .split(",")
+        .map((s) => s.trim())
+        .filter(Boolean)
+        .map((src, i) => ({ src, alt: altList[i] || `${alt} — ${i + 1}` }))
+    : base
+      ? Array.from({ length: n }, (_, i) => ({
           src: `${base}${String(i + 1).padStart(2, "0")}.jpg`,
-          alt: `${alt} — ${i + 1} of ${Number(count) || 0}`,
+          alt: `${alt} — ${i + 1} of ${n}`,
         }))
-      : []);
+      : [];
 
   const total = resolved.length;
+  const ms = Number(interval) || 6000;
+  const showCaption = caption !== "off";
   const [idx, setIdx] = useState(0);
   const [reduced, setReduced] = useState(false);
 
@@ -42,9 +54,9 @@ export default function Carousel({
 
   useEffect(() => {
     if (reduced || total < 2) return;
-    const t = setTimeout(() => setIdx((i) => (i + 1) % total), interval);
+    const t = setTimeout(() => setIdx((i) => (i + 1) % total), ms);
     return () => clearTimeout(t);
-  }, [idx, reduced, interval, total]);
+  }, [idx, reduced, ms, total]);
 
   if (total === 0) return null;
   const current = resolved[Math.min(idx, total - 1)];
@@ -70,7 +82,7 @@ export default function Carousel({
                 style={
                   reduced
                     ? { width: "100%" }
-                    : { animation: `carousel-progress ${interval}ms linear forwards` }
+                    : { animation: `carousel-progress ${ms}ms linear forwards` }
                 }
               />
             )}

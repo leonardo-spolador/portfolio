@@ -38,8 +38,12 @@ export default function Accordion({
             {title}
           </span>
           {subtitle && (
-            <span className="font-heading text-[22px] font-normal leading-[1.4] text-zinc-900 whitespace-pre-line">
-              {subtitle}
+            <span className="font-heading text-[22px] font-normal leading-[1.4] text-zinc-900">
+              {subtitle.split("||").map((line, i) => (
+                <span key={i} className="block">
+                  {line.trim()}
+                </span>
+              ))}
             </span>
           )}
         </span>
