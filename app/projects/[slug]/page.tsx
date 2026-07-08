@@ -207,9 +207,19 @@ function SubSection({
   );
 }
 
-function DividedCols({ children }: { children: React.ReactNode }) {
+function DividedCols({
+  children,
+  gap,
+}: {
+  children: React.ReactNode;
+  gap?: string;
+}) {
+  // Horizontal padding between each column's content and its vertical divider.
+  const colPadding = gap === "64" ? "lg:[&>*]:px-16" : "lg:[&>*]:px-8";
   return (
-    <div className="mt-15 mb-24 grid grid-cols-1 gap-10 lg:grid-flow-col lg:auto-cols-fr lg:gap-0 lg:divide-x lg:divide-black/10 lg:[&>*]:px-8 lg:[&>*:first-child]:pl-0 lg:[&>*:last-child]:pr-0">
+    <div
+      className={`mt-15 mb-24 grid grid-cols-1 gap-10 lg:grid-flow-col lg:auto-cols-fr lg:gap-0 lg:divide-x lg:divide-black/10 ${colPadding} lg:[&>*:first-child]:pl-0 lg:[&>*:last-child]:pr-0`}
+    >
       {children}
     </div>
   );
