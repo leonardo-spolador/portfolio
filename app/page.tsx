@@ -67,7 +67,7 @@ export default function Home() {
 
       {/* Case study rows */}
       <section className="border-t border-black/10">
-        {cases.items.map((item) => (
+        {cases.items.filter((item) => !item.hidden).map((item) => (
           <CaseTile key={item.href} item={item} comingSoonLabel={cases.coming_soon_label} />
         ))}
       </section>
