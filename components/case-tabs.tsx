@@ -41,7 +41,7 @@ export function Tabs({ title, children }: { title?: string; children: ReactNode 
           </button>
         ))}
       </div>
-      <div className="bg-[#F3F3E8] p-8 sm:p-16 [&_h3]:font-heading [&_h3]:text-3xl [&_h3]:font-normal [&_h3]:tracking-tight [&_h3]:mb-12 [&_p]:text-base [&_p]:text-zinc-600 [&_p]:leading-relaxed [&_p+p]:mt-5 [&_strong]:font-semibold [&_strong]:text-zinc-900 [&_ul]:list-disc [&_ul]:pl-5 [&_li]:text-base [&_li]:text-zinc-600 [&_li]:leading-relaxed [&_li+li]:mt-4">
+      <div className="bg-[#F3F3E8] p-8 sm:p-16 [&_h3]:font-heading [&_h3]:!text-3xl [&_h3]:font-normal [&_h3]:tracking-tight [&_h3]:mb-12 [&_p]:text-base [&_p]:text-zinc-600 [&_p]:leading-relaxed [&_p+p]:mt-5 [&_strong]:font-semibold [&_strong]:text-zinc-900 [&_ul]:list-disc [&_ul]:pl-5 [&_li]:text-base [&_li]:text-zinc-600 [&_li]:leading-relaxed [&_li+li]:mt-4">
         {tabs[active]?.props.children}
       </div>
     </section>
