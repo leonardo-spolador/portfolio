@@ -7,17 +7,34 @@ type Slide = { src: string; alt: string };
 
 export default function Carousel({
   slides,
+  base,
+  count,
+  alt = "Slide",
   interval = 6000,
   showCaption = true,
 }: {
-  slides: Slide[];
+  slides?: Slide[];
+  base?: string;
+  count?: number | string;
+  alt?: string;
   interval?: number;
   showCaption?: boolean;
 }) {
+  // Build the slide list from either an explicit array or a base+count
+  // sequence. Generating here (client-side) keeps MDX props simple and
+  // serializable across the server→client boundary.
+  const resolved: Slide[] =
+    slides ??
+    (base
+      ? Array.from({ length: Number(count) || 0 }, (_, i) => ({
+          src: `${base}${String(i + 1).padStart(2, "0")}.jpg`,
+          alt: `${alt} — ${i + 1} of ${Number(count) || 0}`,
+        }))
+      : []);
+
+  const total = resolved.length;
   const [idx, setIdx] = useState(0);
   const [reduced, setReduced] = useState(false);
-
-  const total = slides?.length ?? 0;
 
   useEffect(() => {
     setReduced(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
@@ -30,13 +47,13 @@ export default function Carousel({
   }, [idx, reduced, interval, total]);
 
   if (total === 0) return null;
-  const current = slides[Math.min(idx, total - 1)];
+  const current = resolved[Math.min(idx, total - 1)];
 
   return (
     <figure>
       {/* Progress bars: paginator + progress */}
       <div className="mb-4 flex gap-2">
-        {slides.map((slide, i) => (
+        {resolved.map((slide, i) => (
           <button
             key={slide.src}
             type="button"
