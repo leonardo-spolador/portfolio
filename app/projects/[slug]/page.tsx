@@ -145,6 +145,68 @@ function ChapterBlock({
   );
 }
 
+// "How It Grew"-style section: same chrome as ChapterBlock (full-bleed top
+// divider, 40px title, section padding) but children are laid out as
+// self-styled rows rather than piped through prose typography.
+function GrowthSection({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <section className="not-prose relative py-21">
+      <div
+        className="absolute top-0 left-1/2 h-px w-screen -translate-x-1/2 bg-black/10"
+        aria-hidden="true"
+      />
+      <h2 className="font-heading text-[40px] font-normal leading-[1.4] tracking-tight text-zinc-900">
+        {title}
+      </h2>
+      <div className="mt-16 flex flex-col">{children}</div>
+    </section>
+  );
+}
+
+// One mid-section row: 28px subtitle on the left, body copy on the right,
+// separated by a top border with 32px of upper padding.
+function GrowthRow({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="grid grid-cols-1 gap-4 border-t border-black/10 pt-8 pb-8 lg:grid-cols-2 lg:gap-16 [&_p]:text-base [&_p]:text-zinc-600 [&_p]:leading-relaxed [&_p+p]:mt-5 [&_strong]:font-semibold [&_strong]:text-zinc-900">
+      <h3 className="font-heading text-[28px] font-normal leading-[1.4] text-zinc-900">
+        {title}
+      </h3>
+      <div>{children}</div>
+    </div>
+  );
+}
+
+// Full-width sub-section inside a GrowthSection: 28px subtitle over a top
+// border, then its content (e.g. the collaborators grid) beneath.
+function SubSection({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="border-t border-black/10 pt-8">
+      <h3 className="font-heading text-[28px] font-normal leading-[1.4] text-zinc-900">
+        {title}
+      </h3>
+      {children}
+    </div>
+  );
+}
+
 function DividedCols({ children }: { children: React.ReactNode }) {
   return (
     <div className="mt-15 mb-24 grid grid-cols-1 gap-10 lg:grid-flow-col lg:auto-cols-fr lg:gap-0 lg:divide-x lg:divide-black/10 lg:[&>*]:px-8 lg:[&>*:first-child]:pl-0 lg:[&>*:last-child]:pr-0">
@@ -205,7 +267,7 @@ function Columns({ children }: { children: React.ReactNode }) {
   );
 }
 
-const components = { Mockup, Quote, Slideshow, PeopleGrid, Columns, Tabs, Tab, TabCols, CardQuote, Accordion, Carousel, ChapterBlock, DividedCols, LeadSection };
+const components = { Mockup, Quote, Slideshow, PeopleGrid, Columns, Tabs, Tab, TabCols, CardQuote, Accordion, Carousel, ChapterBlock, DividedCols, LeadSection, GrowthSection, GrowthRow, SubSection };
 
 export default async function CaseStudyPage({
   params,

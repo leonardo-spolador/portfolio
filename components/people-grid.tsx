@@ -11,9 +11,11 @@ export default function PeopleGrid() {
     <div className="not-prose my-10 flex flex-col gap-10">
       {data.groups.map((group) => (
         <div key={group.label}>
-          <h4 className="text-sm font-semibold text-zinc-900">{group.label}</h4>
+          <h4 className="font-heading text-[22px] font-normal leading-[1.4] text-zinc-900">
+            {group.label}
+          </h4>
           {group.caption && (
-            <p className="mt-1 text-sm text-zinc-500">{group.caption}</p>
+            <p className="mt-2 text-sm text-zinc-500">{group.caption}</p>
           )}
           <ul className="mt-5 grid grid-cols-3 gap-x-4 gap-y-6 sm:grid-cols-5 md:grid-cols-7">
             {group.people.map((p) => (
