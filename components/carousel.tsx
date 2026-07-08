@@ -63,31 +63,57 @@ export default function Carousel({
 
   return (
     <figure>
-      {/* Progress bars: paginator + progress */}
-      <div className="mb-4 flex gap-2">
-        {resolved.map((slide, i) => (
-          <button
-            key={slide.src}
-            type="button"
-            onClick={() => setIdx(i)}
-            aria-label={`Go to slide ${i + 1} of ${total}`}
-            aria-current={i === idx}
-            className="h-1 flex-1 cursor-pointer overflow-hidden bg-black/10"
-          >
-            {i < idx && <span className="block h-full w-full bg-zinc-900" />}
-            {i === idx && (
-              <span
-                key={idx}
-                className="block h-full bg-zinc-900"
-                style={
-                  reduced
-                    ? { width: "100%" }
-                    : { animation: `carousel-progress ${ms}ms linear forwards` }
-                }
-              />
-            )}
-          </button>
-        ))}
+      {/* Progress bars (paginator) + prev/next arrows */}
+      <div className="mb-4 flex items-center gap-3">
+        <div className="flex flex-1 gap-2">
+          {resolved.map((slide, i) => (
+            <button
+              key={slide.src}
+              type="button"
+              onClick={() => setIdx(i)}
+              aria-label={`Go to slide ${i + 1} of ${total}`}
+              aria-current={i === idx}
+              className="h-1 flex-1 cursor-pointer overflow-hidden bg-black/10"
+            >
+              {i < idx && <span className="block h-full w-full bg-zinc-900" />}
+              {i === idx && (
+                <span
+                  key={idx}
+                  className="block h-full bg-zinc-900"
+                  style={
+                    reduced
+                      ? { width: "100%" }
+                      : { animation: `carousel-progress ${ms}ms linear forwards` }
+                  }
+                />
+              )}
+            </button>
+          ))}
+        </div>
+        <button
+          type="button"
+          onClick={() => setIdx((i) => (i - 1 + total) % total)}
+          aria-label="Previous slide"
+          className="flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-full border border-black/15 text-zinc-900 hover:border-zinc-500 transition-colors"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M5 12l14 0" />
+            <path d="M5 12l6 6" />
+            <path d="M5 12l6 -6" />
+          </svg>
+        </button>
+        <button
+          type="button"
+          onClick={() => setIdx((i) => (i + 1) % total)}
+          aria-label="Next slide"
+          className="flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-full border border-black/15 text-zinc-900 hover:border-zinc-500 transition-colors"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M5 12l14 0" />
+            <path d="M13 18l6 -6" />
+            <path d="M13 6l6 6" />
+          </svg>
+        </button>
       </div>
       <div className="relative aspect-[16/10] overflow-hidden rounded-lg border border-zinc-100 bg-zinc-50">
         <Image
