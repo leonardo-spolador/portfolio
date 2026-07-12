@@ -60,7 +60,18 @@ export default function Home() {
         <section key={i} className="border-t border-black/10 py-24">
           <div className="page-container flex flex-col gap-6 sm:flex-row sm:gap-12">
             <h2 className="font-heading text-2xl font-semibold text-zinc-900 sm:w-1/2">{section.heading}</h2>
-            <p className="text-base text-zinc-600 leading-relaxed sm:w-1/2">{section.body}</p>
+            <div className="flex flex-col gap-6 sm:w-1/2">
+              {section.body.map((para, j) => (
+                <p
+                  key={j}
+                  className={`text-base leading-relaxed whitespace-pre-line ${
+                    para.bold ? "font-semibold text-zinc-900" : "text-zinc-600"
+                  }`}
+                >
+                  {para.text}
+                </p>
+              ))}
+            </div>
           </div>
         </section>
       ))}

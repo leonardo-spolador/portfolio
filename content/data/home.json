@@ -33,15 +33,27 @@
   "sections": [
     {
       "heading": "Data only matters when it guides what people do next.",
-      "body": "Energy teams sit on more data than they can use: analytics platforms, sensor streams, reports, spreadsheets. The hard part was never showing it. At TWAICE I led the move from a monitoring product to one that told operators what to do about what they were seeing, and annual contract value grew 48%. At Shoreline Wind I'm doing it again with simulation tools, where the whole point is that someone acts on what they saw, whether that means committing to a plan or changing it."
+      "body": [
+        { "text": "Energy teams sit on more data than they can use: analytics platforms, sensor streams, reports, spreadsheets. The hard part was never showing it.", "bold": false },
+        { "text": "At TWAICE I led the move from a monitoring product to one that told operators what to do about what they were seeing, and annual contract value grew 48%.", "bold": true },
+        { "text": "At Shoreline Wind I'm doing it again with simulation tools, where the whole point is that someone acts on what they saw, whether that means committing to a plan or changing it.", "bold": false }
+      ]
     },
     {
       "heading": "I own execution end to end.",
-      "body": "At Shoreline Wind my scope runs well beyond design: product decisions, customer discovery, UX quality, and delivery. I define what gets built from customer conversations, then ship it. Closing the gap between what customers need and what actually ships is the work I do best, and the work I want to keep doing deliberately."
+      "body": [
+        { "text": "At Shoreline Wind my scope runs well beyond design: product decisions, customer discovery, UX quality, and delivery.\nI define what gets built from customer conversations, then ship it.", "bold": true },
+        { "text": "Closing the gap between what customers need and what actually ships is the work I do best, and the work I want to keep doing deliberately.", "bold": false }
+      ]
     },
     {
       "heading": "Judgment over tooling.",
-      "body": "Being fluent in Claude Code or Copilot in 2026 is like being fluent in Figma in 2020. Picking the right tool matters, but it isn't the skill. The skill is knowing what to build, what to cut, and when something is ready to ship. When I built the Wind ROI Calculator, Figma Make was the right call, and the tool is live and in use today. Now that I'm shipping functional prototypes and production-ready work, my stack is Claude Code, Copilot, and VS Code against a real codebase. Next year it will be something else. The value was never the tool. It's the judgment deciding what it makes."
+      "body": [
+        { "text": "Being fluent in Claude Code or Copilot in 2026 is like being fluent in Figma in 2020.", "bold": false },
+        { "text": "Picking the right tool matters, but it isn't the skill. The skill is knowing what to build, what to cut, and when something is ready to ship.", "bold": true },
+        { "text": "When I built the Wind ROI Calculator, Figma Make was the right call, and the tool is live and in use today. Now that I'm shipping functional prototypes and production-ready work, my stack is Claude Code, Copilot, and VS Code against a real codebase. Next year it will be something else.", "bold": false },
+        { "text": "The value was never the tool. It's the judgment deciding what it makes.", "bold": false }
+      ]
     }
   ],
   "testimonial": {
